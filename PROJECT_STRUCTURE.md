@@ -5,7 +5,7 @@ Complete overview of the portfolio website architecture.
 ## Directory Structure
 
 ```
-freelance-portfolio/
+freelance-n-portfolio/
 │
 ├── app/                          # Next.js App Router directory
 │   ├── api/                      # API routes

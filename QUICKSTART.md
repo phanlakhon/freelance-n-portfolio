@@ -18,7 +18,7 @@ A production-ready Next.js portfolio website with:
 
 ```bash
 # Navigate to project folder
-cd freelance-portfolio
+cd freelance-n-portfolio
 
 # Install packages
 npm install
