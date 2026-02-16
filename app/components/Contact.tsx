@@ -11,6 +11,7 @@ export default function Contact() {
         message: "",
     });
 
+    const isImplemented = true;
     const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
         "idle",
     );
@@ -165,7 +166,9 @@ export default function Contact() {
 
                             <button
                                 type="submit"
-                                disabled={status === "sending"}
+                                disabled={
+                                    status === "sending" || isImplemented
+                                }
                                 className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 {status === "sending" && "กำลังส่ง..."}
