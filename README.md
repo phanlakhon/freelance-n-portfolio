@@ -23,7 +23,7 @@ This website embodies a **minimal luxury** aesthetic:
 ## 📁 Project Structure
 
 ```
-freelance-portfolio/
+freelance-n-portfolio/
 ├── app/
 │   ├── components/
 │   │   ├── Navigation.tsx    # Sticky navigation with scroll effect

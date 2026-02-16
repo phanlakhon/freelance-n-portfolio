@@ -10,7 +10,7 @@ const notoSansThai = Noto_Sans_Thai({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourname.com"),
+  metadataBase: new URL("https://phanlakhon-dev.vercel.app"),
   title: {
     default: "Frontend Expert • Technical Partner for Modern Web Solutions",
     template: "%s | Your Name",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "th_TH",
-    url: "https://yourname.com",
+    url: "https://phanlakhon-dev.vercel.app",
     siteName: "Your Name • Frontend Expert",
     title: "Frontend Expert • Technical Partner for Modern Web Solutions",
     description:

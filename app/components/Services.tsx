@@ -6,32 +6,45 @@ const services = [
   {
     title: "Frontend Architecture & Development",
     description:
-      "ออกแบบและสร้าง Frontend Systems สำหรับเว็บแอปพลิเคชันที่ซับซ้อนโดยใช้ React, Next.js, Vue.js, และ Nuxt.js เป็นหลัก เน้นโครงสร้างที่ทดสอบได้จริงและดูแลรักษาง่ายในระยะยาว",
-    outcomes: ["สถาปัตยกรรมที่ยืดหยุ่น", "โค้ดที่บำรุงรักษาง่าย", "Scalable Solutions"],
+      "ออกแบบและพัฒนาโครงสร้าง Frontend สำหรับผลิตภัณฑ์ดิจิทัลที่ต้องการความชัดเจนในระบบและความยืดหยุ่นในระยะยาว โดยเลือกใช้เทคโนโลยีที่เหมาะสมกับบริบทของโปรเจกต์ ไม่ใช่เพียงตามกระแส",
+    outcomes: [
+      "โครงสร้างที่อ่านง่ายและขยายต่อได้",
+      "ลดความซับซ้อนในระยะยาว",
+      "รองรับการเติบโตของทีมและโปรดักต์",
+    ],
   },
   {
-    title: "Legacy Code Refactoring & Rescue",
+    title: "Legacy Frontend Refactoring",
     description:
-      "เชี่ยวชาญการวิเคราะห์และปรับปรุงฐานโค้ด Frontend เดิม (Legacy Code) ที่มีปัญหาซับซ้อน, ทำงานช้า, หรือขยายต่อได้ยาก ให้กลับมาทำงานได้อย่างเต็มประสิทธิภาพ",
-    outcomes: ["เพิ่มประสิทธิภาพ", "ลด Technical Debt", "โค้ดที่อ่านง่ายขึ้น"],
+      "วิเคราะห์และปรับปรุงระบบ Frontend เดิมที่มีปัญหาเชิงโครงสร้างหรือประสิทธิภาพ เพื่อให้กลับมาทำงานได้อย่างมีเสถียรภาพ พร้อมทั้งจัดระเบียบโค้ดให้ทีมสามารถทำงานต่อได้อย่างมั่นใจ",
+    outcomes: [
+      "ลด Technical Debt อย่างเป็นระบบ",
+      "เพิ่มประสิทธิภาพและความเสถียร",
+      "โค้ดที่ทีมเข้าใจและดูแลต่อได้ง่าย",
+    ],
   },
   {
-    title: "API Integration & System Automation",
+    title: "API Integration & Frontend Automation",
     description:
-      "วางระบบเชื่อมต่อ Frontend เข้ากับ Backend API ทุกรูปแบบ และสร้าง Workflow Automation ด้วย n8n เพื่อลดขั้นตอนการทำงานที่ซ้ำซ้อนและเพิ่มศักยภาพของระบบ",
-    outcomes: ["การเชื่อมต่อที่เสถียร", "ลดงานซ้ำซ้อน", "เพิ่มประสิทธิภาพ Workflow"],
+      "เชื่อมต่อ Frontend เข้ากับ Backend API อย่างมีโครงสร้าง พร้อมออกแบบ Workflow ที่ช่วยลดขั้นตอนซ้ำซ้อน เพื่อให้ระบบทำงานได้ลื่นไหลและรองรับการใช้งานจริง",
+    outcomes: [
+      "การเชื่อมต่อที่เสถียรและคาดการณ์ได้",
+      "ลดงาน manual ที่ไม่จำเป็น",
+      "ประสบการณ์ผู้ใช้ที่ต่อเนื่องมากขึ้น",
+    ],
   },
 ];
 
 export default function Services() {
   return (
     <section id="services" className="section-container section-spacing bg-neutral-50">
-      <div className="max-w-3xl mb-20">
+      <div className="mb-20">
         <h2 className="heading-display text-display-md mb-6">
-          Core Competencies
+          How We Can Collaborate
         </h2>
-        <p className="text-lg text-neutral-600">
-          บริการของเราครอบคลุมตั้งแต่การวางสถาปัตยกรรมไปจนถึงการแก้ไขปัญหาเชิงลึก
+        <p className="text-lg text-neutral-600 leading-relaxed">
+          งานที่เรารับจะเน้นฝั่ง Frontend เป็นหลัก ตั้งแต่การวางโครงสร้างระบบใหม่
+          ไปจนถึงการปรับปรุงระบบเดิมให้ทำงานได้อย่างมีประสิทธิภาพและยั่งยืน
         </p>
       </div>
 

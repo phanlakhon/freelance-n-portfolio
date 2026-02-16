@@ -18,7 +18,7 @@ A production-ready Next.js portfolio website with:
 
 ```bash
 # Navigate to project folder
-cd freelance-portfolio
+cd freelance-n-portfolio
 
 # Install packages
 npm install
@@ -80,7 +80,7 @@ git push -u origin main
 ## 📋 Essential Checklist
 
 Before going live:
-- [ ] Update name everywhere (search for "YourName")
+- [ ] Update name everywhere (search for "O. Phanlakhon")
 - [ ] Update email (search for "your.email@example.com")
 - [ ] Add real projects to Work.tsx
 - [ ] Replace placeholder images

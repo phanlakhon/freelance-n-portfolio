@@ -178,7 +178,7 @@ const techCategories = [
 ```typescript
 // Change brand name/logo
 <Link href="/" className="...">
-  YourName  // Or add <Image> for logo
+  O. Phanlakhon  // Or add <Image> for logo
 </Link>
 
 // Update menu items
@@ -211,7 +211,7 @@ export const metadata: Metadata = {
     "Your keyword 2",
     // Add relevant keywords
   ],
-  metadataBase: new URL("https://yourname.com"),
+  metadataBase: new URL("https://phanlakhon-dev.vercel.app"),
   // Update all URLs and social handles
 };
 ```
