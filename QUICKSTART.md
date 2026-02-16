@@ -80,7 +80,7 @@ git push -u origin main
 ## 📋 Essential Checklist
 
 Before going live:
-- [ ] Update name everywhere (search for "YourName")
+- [ ] Update name everywhere (search for "O. Phanlakhon")
 - [ ] Update email (search for "your.email@example.com")
 - [ ] Add real projects to Work.tsx
 - [ ] Replace placeholder images

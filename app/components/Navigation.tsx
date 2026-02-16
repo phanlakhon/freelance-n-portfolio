@@ -33,7 +33,7 @@ export default function Navigation() {
             href="/"
             className="text-xl md:text-2xl font-display font-semibold hover:text-accent transition-colors"
           >
-            YourName
+            O. Phanlakhon
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

@@ -71,7 +71,7 @@ vercel --prod
 ### 3. Configure Custom Domain (Optional)
 
 1. In Vercel Dashboard → Your Project → Settings → Domains
-2. Add your custom domain (e.g., `yourname.com`)
+2. Add your custom domain (e.g., `phanlakhon-dev.vercel.app`)
 3. Follow DNS configuration instructions:
    ```
    Type: A
@@ -146,13 +146,13 @@ After deployment:
 
 ```bash
 # Add your sitemap
-https://yourname.com/sitemap.xml
+https://phanlakhon-dev.vercel.app/sitemap.xml
 ```
 
 1. Go to [Google Search Console](https://search.google.com/search-console)
 2. Add property (your domain)
 3. Verify ownership (Vercel auto-verifies with DNS)
-4. Submit sitemap: `https://yourname.com/sitemap.xml`
+4. Submit sitemap: `https://phanlakhon-dev.vercel.app/sitemap.xml`
 
 ### 2. Google Analytics (Optional)
 
@@ -186,7 +186,7 @@ Add to enhance search appearance:
     "name": "Your Name",
     "jobTitle": "Senior Frontend Developer",
     "description": "Freelance frontend developer specializing in React...",
-    "url": "https://yourname.com",
+    "url": "https://phanlakhon-dev.vercel.app",
     "sameAs": [
       "https://github.com/yourusername",
       "https://linkedin.com/in/yourusername"
