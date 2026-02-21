@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -13,22 +14,21 @@ const projectData = [
             "Firebase",
             "API Integration",
         ],
-        image: "/placeholder-project-4.jpg",
+        image: "/works/KONticket.png",
     },
     {
         id: "p2",
         tech: ["Laravel", "Nuxt.js", "SCSS", "JavaScript", "API Integration"],
-        image: "/placeholder-project-2.jpg",
+        image: "/works/web-platform-frontend.png",
     },
     {
         id: "p3",
         tech: ["Laravel", "Nuxt.js", "SCSS", "JavaScript", "API Integration"],
-        image: "/placeholder-project-3.jpg",
+        image: "/works/b2b.png",
     },
     {
         id: "p4",
         tech: ["PHP", "CSS", "JavaScript"],
-        image: "/placeholder-project-1.jpg",
     },
 ];
 
@@ -57,23 +57,40 @@ export default function Work() {
                         className="grid lg:grid-cols-2 gap-16 items-center"
                     >
                         <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                            <div className="relative aspect-[5/4] bg-neutral-100 border border-neutral-200 overflow-hidden group">
-                                <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/5 to-neutral-900/20 group-hover:opacity-0 transition-opacity duration-500"></div>
-                                <div className="absolute inset-0 flex items-center justify-center text-neutral-400">
-                                    <svg
-                                        className="w-20 h-20"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={1}
-                                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                            <div className="relative aspect-[5/4] bg-neutral-50 border border-neutral-200 overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-500">
+                                {project.image ? (
+                                    <>
+                                        <Image
+                                            src={project.image}
+                                            alt={t(
+                                                `projects.${project.id}.title`,
+                                            )}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                            sizes="(max-width: 768px) 100vw, 50vw"
                                         />
-                                    </svg>
-                                </div>
+                                        <div className="absolute inset-0 bg-neutral-900/0 group-hover:bg-neutral-900/5 transition-colors duration-500"></div>
+                                    </>
+                                ) : (
+                                    <>
+                                        {/* Elegant Abstract Placeholder */}
+                                        <div
+                                            className={`absolute inset-0 opacity-20 bg-gradient-to-br ${
+                                                index % 2 === 0
+                                                    ? "from-accent to-neutral-400"
+                                                    : "from-neutral-400 to-accent"
+                                            }`}
+                                        ></div>
+                                        <div className="absolute inset-0 flex items-center justify-center">
+                                            <div className="text-center">
+                                                <span className="block text-6xl font-display font-bold text-neutral-200 mb-2 uppercase tracking-tighter">
+                                                    {project.id}
+                                                </span>
+                                                <div className="h-px w-12 bg-neutral-200 mx-auto"></div>
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
                             </div>
                         </div>
 
@@ -91,7 +108,8 @@ export default function Work() {
                                         {t("details_label")}
                                     </h4>
                                     <p className="text-neutral-600 leading-relaxed text-[15px]">
-                                        {t(`projects.${project.id}.challenge`)} {t(`projects.${project.id}.solution`)}
+                                        {t(`projects.${project.id}.challenge`)}{" "}
+                                        {t(`projects.${project.id}.solution`)}
                                     </p>
                                 </div>
 

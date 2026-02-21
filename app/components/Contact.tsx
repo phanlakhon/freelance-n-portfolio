@@ -57,7 +57,7 @@ export default function Contact() {
                     <h2 className="heading-display text-display-md mb-6">
                         {t("title")}
                     </h2>
-                    <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-lg text-neutral-600 max-w-xl mx-auto leading-relaxed">
                         {t("description")}
                     </p>
                 </motion.div>
