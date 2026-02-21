@@ -1,7 +1,12 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+import { Link } from "../../i18n/routing";
+
 export default function Footer() {
     const currentYear = new Date().getFullYear();
+    const t = useTranslations("Footer");
+    const tNav = useTranslations("Navigation");
 
     return (
         <footer className="bg-neutral-900 text-white">
@@ -12,54 +17,53 @@ export default function Footer() {
                             O. Phanlakhon
                         </h3>
                         <p className="text-neutral-400 leading-relaxed text-sm max-w-[90%]">
-                            Developer & Freelance
-                            ร่วมพัฒนาและดูแลโปรเจกต์ตั้งแต่การวางแนวคิดไปจนถึงการใช้งานจริง
+                            {t("desc")}
                         </p>
                     </div>
 
                     <div>
                         <h4 className="text-sm font-semibold uppercase tracking-widest text-neutral-500 mb-4">
-                            Navigation
+                            {t("nav_title")}
                         </h4>
                         <ul className="space-y-3 text-sm">
                             <li>
-                                <a
+                                <Link
                                     href="#services"
                                     className="text-neutral-300 hover:text-accent transition-colors"
                                 >
-                                    บริการ
-                                </a>
+                                    {tNav("services")}
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     href="#work"
                                     className="text-neutral-300 hover:text-accent transition-colors"
                                 >
-                                    ผลงาน
-                                </a>
+                                    {tNav("work")}
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     href="#about"
                                     className="text-neutral-300 hover:text-accent transition-colors"
                                 >
-                                    เกี่ยวกับ
-                                </a>
+                                    {tNav("about")}
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     href="#contact"
                                     className="text-neutral-300 hover:text-accent transition-colors"
                                 >
-                                    ติดต่อ
-                                </a>
+                                    {tNav("contact")}
+                                </Link>
                             </li>
                         </ul>
                     </div>
 
                     <div>
                         <h4 className="text-sm font-semibold uppercase tracking-widest text-neutral-500 mb-4">
-                            Connect
+                            {t("connect_title")}
                         </h4>
 
                         <div className="flex gap-4 items-center">
@@ -97,8 +101,7 @@ export default function Footer() {
                         </div>
 
                         <p className="mt-6 text-xs text-neutral-500 leading-relaxed max-w-xs">
-                            ปัจจุบันเปิดรับงาน Frontend
-                            และงานปรับปรุงระบบในลักษณะ Freelance
+                            {t("freelance_status")}
                         </p>
                     </div>
                 </div>
@@ -108,7 +111,6 @@ export default function Footer() {
                         <p>
                             © {currentYear} O. Phanlakhon All rights reserved.
                         </p>
-                        {/* <p>สร้างด้วย Next.js • Hosted on Vercel</p> */}
                     </div>
                 </div>
             </div>

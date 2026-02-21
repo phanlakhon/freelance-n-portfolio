@@ -1,11 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "../../i18n/routing";
 import { useState, useEffect } from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslations } from "next-intl";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
+  const t = useTranslations("Navigation");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,26 +44,27 @@ export default function Navigation() {
               href="#services"
               className="text-sm font-medium text-neutral-700 hover:text-accent transition-colors"
             >
-              บริการ
+              {t("services")}
             </Link>
             <Link
               href="#work"
               className="text-sm font-medium text-neutral-700 hover:text-accent transition-colors"
             >
-              ผลงาน
+              {t("work")}
             </Link>
             <Link
               href="#about"
               className="text-sm font-medium text-neutral-700 hover:text-accent transition-colors"
             >
-              เกี่ยวกับ
+              {t("about")}
             </Link>
             <Link
               href="#contact"
               className="px-6 py-2.5 bg-primary text-white text-sm font-medium hover:bg-primary-light transition-colors"
             >
-              ติดต่อ
+              {t("contact")}
             </Link>
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}

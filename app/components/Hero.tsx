@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+    const t = useTranslations("Hero");
+
     return (
         <section className="section-container section-spacing min-h-[90vh] flex items-center">
             <div className="max-w-5xl">
@@ -22,21 +25,16 @@ export default function Hero() {
                         with Clarity & Craft
                     </h1>
 
-                    <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mb-12 leading-relaxed">
-                        นี่คือพื้นที่ส่วนตัวและงานรับอิสระของเรา โดยโฟกัสหลักที่
-                        Frontend Development และการออกแบบโครงสร้างที่อ่านง่าย
-                        ดูแลรักษาง่าย และขยายต่อได้ในอนาคต
-
-                        สามารถทำงานฝั่ง Backend ได้ในระดับที่จำเป็นต่อการเชื่อมระบบ
-                        แต่จะเน้นงานที่ต้องการความละเอียดในฝั่ง UI, UX และ Architecture เป็นหลัก
+                    <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mb-12 leading-relaxed whitespace-pre-line">
+                        {t("description")}
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <Link href="#services" className="btn-primary">
-                            Discuss Your Frontend Project
+                        <Link href="#contact" className="btn-primary">
+                            {t("btn_discuss")}
                         </Link>
-                        <Link href="#contact" className="btn-outline">
-                            Explore Selected Work
+                        <Link href="#work" className="btn-outline">
+                            {t("btn_explore")}
                         </Link>
                     </div>
                 </motion.div>
@@ -50,34 +48,28 @@ export default function Hero() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         <div>
                             <p className="text-sm uppercase tracking-widest text-neutral-500 mb-4">
-                                Architecture First
+                                {t("feature_1_title")}
                             </p>
                             <p className="text-base text-neutral-700 leading-relaxed">
-                                ออกแบบระบบก่อนเขียนโค้ด
-                                เพื่อให้ทุกการตัดสินใจรองรับการเติบโตในระยะยาว
-                                ไม่ใช่เพียงการแก้ปัญหาระยะสั้น
+                                {t("feature_1_desc")}
                             </p>
                         </div>
 
                         <div>
                             <p className="text-sm uppercase tracking-widest text-neutral-500 mb-4">
-                                Performance by Design
+                                {t("feature_2_title")}
                             </p>
                             <p className="text-base text-neutral-700 leading-relaxed">
-                                โครงสร้างที่ถูกออกแบบให้เร็วตั้งแต่ต้น ลด
-                                Technical Debt
-                                และเพิ่มคุณภาพประสบการณ์ผู้ใช้อย่างเป็นระบบ
+                                {t("feature_2_desc")}
                             </p>
                         </div>
 
                         <div>
                             <p className="text-sm uppercase tracking-widest text-neutral-500 mb-4">
-                                Long-Term Partnership
+                                {t("feature_3_title")}
                             </p>
                             <p className="text-base text-neutral-700 leading-relaxed">
-                                ทำงานร่วมกับทีมในฐานะพาร์ทเนอร์เชิงกลยุทธ์
-                                ไม่ใช่เพียงผู้รับจ้างพัฒนา
-                                แต่เป็นผู้ร่วมออกแบบทิศทางผลิตภัณฑ์
+                                {t("feature_3_desc")}
                             </p>
                         </div>
                     </div>
