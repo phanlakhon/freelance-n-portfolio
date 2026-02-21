@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function About() {
+  const t = useTranslations("About");
+
   return (
     <section id="about" className="section-container section-spacing bg-neutral-50">
       <div className="max-w-4xl mx-auto">
@@ -14,16 +17,11 @@ export default function About() {
         >
           <div className="space-y-6 text-center md:text-left">
             <p className="text-xl text-neutral-700 leading-relaxed">
-              เรามองว่าการพัฒนาซอฟต์แวร์ไม่ใช่เพียงการสร้างหน้าเว็บไซต์ให้ทำงานได้
-              แต่คือการออกแบบระบบที่มีเหตุผลรองรับในทุกการตัดสินใจ
-              ตั้งแต่โครงสร้างภายใน ไปจนถึงประสบการณ์ของผู้ใช้งาน
+              {t("para1")}
             </p>
 
             <p className="text-lg text-neutral-600 leading-relaxed">
-              โค้ดที่ชัดเจน สถาปัตยกรรมที่คิดมาอย่างรอบคอบ
-              และความยืดหยุ่นต่อการเปลี่ยนแปลงในอนาคต
-              คือมาตรฐานที่เราให้ความสำคัญในทุกโปรเจกต์
-              เพื่อให้ระบบไม่เพียงทำงานได้ในวันนี้ แต่เติบโตต่อได้ในระยะยาว
+              {t("para2")}
             </p>
           </div>
         </motion.div>

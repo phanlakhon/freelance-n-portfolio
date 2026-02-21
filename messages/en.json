@@ -1,0 +1,131 @@
+{
+  "Common": {
+    "title": "Portfolio",
+    "switch_lang": "English"
+  },
+  "Metadata": {
+    "title": "Frontend Expert • Technical Partner for Modern Web Solutions",
+    "description": "Senior frontend developer specializing in React, UI design, performance optimization, and API integration. Building premium digital experiences for ambitious projects."
+  },
+  "Navigation": {
+    "services": "Services",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "badge": "Personal Portfolio · Frontend-Focused Freelance",
+    "title_1": "Frontend Architecture",
+    "title_2": "with Clarity & Craft",
+    "description": "This is my personal space and freelance hub, focused primarily on Frontend Development and designing clean, maintainable, and scalable architectures. While capable of Backend integration as needed, I specialize in UI, UX, and architectural precision.",
+    "btn_discuss": "Discuss Your Frontend Project",
+    "btn_explore": "Explore Selected Work",
+    "feature_1_title": "Architecture First",
+    "feature_1_desc": "Designing systems before writing code, ensuring every decision supports long-term growth rather than just quick fixes.",
+    "feature_2_title": "Performance by Design",
+    "feature_2_desc": "Architectures built for speed from day one, reducing technical debt and systematically enhancing user experience.",
+    "feature_3_title": "Long-Term Partnership",
+    "feature_3_desc": "Collaborating with teams as a strategic partner, not just a developer, to help shape the overall product direction."
+  },
+  "Services": {
+    "title": "How We Can Collaborate",
+    "description": "My services focus primarily on the Frontend, from designing new system architectures to optimizing existing systems for performance and sustainability.",
+    "items": {
+      "item1": {
+        "title": "Frontend Architecture & Development",
+        "description": "Designing and developing Frontend architectures for digital products that require systemic clarity and long-term flexibility, choosing technologies suitable for the context, not just trends.",
+        "outcome1": "Readable and scalable structures",
+        "outcome2": "Reduced long-term complexity",
+        "outcome3": "Supports team and product growth"
+      },
+      "item2": {
+        "title": "Legacy Frontend Refactoring",
+        "description": "Analyzing and improving existing Frontend systems with structural or performance issues, ensuring stability and organizing code for team confidence.",
+        "outcome1": "Systematic Technical Debt reduction",
+        "outcome2": "Enhanced performance and stability",
+        "outcome3": "Easily understandable and maintainable code"
+      },
+      "item3": {
+        "title": "API Integration & Frontend Automation",
+        "description": "Structurally connecting Frontend to Backend APIs and designing workflows that reduce redundancy for fluid and reliable system operation.",
+        "outcome1": "Stable and predictable integration",
+        "outcome2": "Reduced unnecessary manual work",
+        "outcome3": "More consistent user experience"
+      }
+    }
+  },
+  "Work": {
+    "title": "Work & Projects Experience",
+    "description": "Projects I have co-developed and driven within professional contexts, ranging from laying new system foundations to optimizing and expanding existing platforms. Emphasis is placed on clear structure, stability, and user experience.",
+    "details_label": "Work Details",
+    "result_label": "Result",
+    "projects": {
+      "p1": {
+        "title": "Online Ticket Booking Platform",
+        "category": "Frontend Development · Production System",
+        "challenge": "Built an online booking system from scratch, requiring production-readiness, payments, and real-time data management.",
+        "solution": "Developed the frontend using React and Next.js, utilized TailwindCSS for the UI system, and integrated Firebase along with API Integration for a comprehensive booking workflow.",
+        "result": "System deployed to production, successfully handling ticket bookings and user operations."
+      },
+      "p2": {
+        "title": "Website Platform (Admin + Main Site)",
+        "category": "Frontend Development · Full Platform Build",
+        "challenge": "Developed a website platform from scratch, designing both the administrator (Admin) and main user-facing sites with clear structures for future scalability.",
+        "solution": "Built the frontend using Nuxt.js and SCSS, connected to a Laravel API, and designed a systematic component and state management structure for Admin and Main Web synchronization.",
+        "result": "Production-ready system capable of feature expansion without excessive complexity."
+      },
+      "p3": {
+        "title": "B2B E-Commerce Platform",
+        "category": "Frontend Development (Main Website)",
+        "challenge": "Developed a B2B e-commerce website focused on product data clarity and an optimal user experience for corporate clients.",
+        "solution": "Developed the frontend with Nuxt.js connected to a Laravel API, organizing product displays and checkout processes for ease of use.",
+        "result": "A business-oriented website seamlessly and stably connected to the backend system."
+      },
+      "p4": {
+        "title": "Igetweb – Theme Customization Platform",
+        "category": "Frontend Development (In-house Project)",
+        "challenge": "A website builder platform requiring continuous new theme designs, necessitating frontend development and customization that supports various designs without impacting the core architecture.",
+        "solution": "Developed and customized themes using PHP, CSS, and JavaScript, ensuring layout flexibility and compatibility with the existing system for continuous design rollouts.",
+        "result": "Enabled the team to launch new themes faster while maintaining platform stability standards."
+      }
+    }
+  },
+  "About": {
+    "para1": "I believe that software development is more than just making websites work; it is about designing systems with a clear rationale behind every decision—from internal architecture to the user experience.",
+    "para2": "Clarity of code, thoughtfully considered architecture, and flexibility for future changes are the standards I prioritize in every project. This ensures that systems not only perform today but can grow sustainably in the long term."
+  },
+  "TechStack": {
+    "title": "Tech Stack",
+    "description": "The tools and technologies I choose to build robust and efficient systems."
+  },
+  "Contact": {
+    "title": "Let’s Start a Conversation",
+    "description": "If you are looking for help developing, optimizing, or structuring your system with more clarity, feel free to send your project details here. I will get back to you as soon as possible.",
+    "form": {
+      "name": "Contact Name",
+      "name_placeholder": "e.g. Jane Doe",
+      "email": "Email",
+      "email_placeholder": "your@email.com",
+      "type": "Project Type",
+      "type_select": "Select Project Type",
+      "message": "Additional Details",
+      "message_placeholder": "Briefly describe what you want to achieve, current issues, or project goals.",
+      "submit_idle": "Send Project Details",
+      "submit_sending": "Sending...",
+      "submit_sent": "Message Sent Successfully ✓",
+      "submit_error": "An error occurred. Please try again."
+    },
+    "other_channels": "Other Channels",
+    "contact_hours": "Contact Hours",
+    "hours_mon_fri": "Mon - Fri: 9:00 - 18:00",
+    "hours_sat_sun": "Sat - Sun: By Appointment",
+    "reply_time": "Reply within 24 hours",
+    "closing_text": "I am open to discussing new projects, system optimizations, or technical consultations. Feel free to reach out even if you do not have all the details ready yet—we can work together to structure the ideas and project scope."
+  },
+  "Footer": {
+    "desc": "Developer & Freelance. Co-developing and maintaining projects from concept to production.",
+    "nav_title": "Navigation",
+    "connect_title": "Connect",
+    "freelance_status": "Currently open for Frontend and system optimization freelance projects."
+  }
+}

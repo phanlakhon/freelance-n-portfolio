@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
+    const t = useTranslations("Contact");
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -53,13 +55,10 @@ export default function Contact() {
                     className="text-center mb-16"
                 >
                     <h2 className="heading-display text-display-md mb-6">
-                        Let’s Start a Conversation
+                        {t("title")}
                     </h2>
                     <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
-                        หากคุณกำลังมองหาคนช่วยพัฒนา ปรับปรุง
-                        หรือวางโครงสร้างระบบให้ชัดเจนขึ้น
-                        สามารถส่งรายละเอียดโปรเจกต์มาได้ที่นี่
-                        แล้วเราจะติดต่อกลับโดยเร็วที่สุด
+                        {t("description")}
                     </p>
                 </motion.div>
 
@@ -76,7 +75,7 @@ export default function Contact() {
                                     htmlFor="name"
                                     className="block text-sm font-medium text-neutral-700 mb-2"
                                 >
-                                    ชื่อผู้ติดต่อ
+                                    {t("form.name")}
                                 </label>
                                 <input
                                     type="text"
@@ -86,7 +85,7 @@ export default function Contact() {
                                     onChange={handleChange}
                                     required
                                     className="w-full px-4 py-3 bg-white border border-neutral-300 text-neutral-900 focus:border-accent focus:outline-none transition-colors"
-                                    placeholder="เช่น สมหญิง ใจดี"
+                                    placeholder={t("form.name_placeholder")}
                                 />
                             </div>
 
@@ -95,7 +94,7 @@ export default function Contact() {
                                     htmlFor="email"
                                     className="block text-sm font-medium text-neutral-700 mb-2"
                                 >
-                                    อีเมล
+                                    {t("form.email")}
                                 </label>
                                 <input
                                     type="email"
@@ -105,7 +104,7 @@ export default function Contact() {
                                     onChange={handleChange}
                                     required
                                     className="w-full px-4 py-3 bg-white border border-neutral-300 text-neutral-900 focus:border-accent focus:outline-none transition-colors"
-                                    placeholder="your@email.com"
+                                    placeholder={t("form.email_placeholder")}
                                 />
                             </div>
 
@@ -114,7 +113,7 @@ export default function Contact() {
                                     htmlFor="projectType"
                                     className="block text-sm font-medium text-neutral-700 mb-2"
                                 >
-                                    ลักษณะงานโดยประมาณ
+                                    {t("form.type")}
                                 </label>
                                 <select
                                     id="projectType"
@@ -124,7 +123,7 @@ export default function Contact() {
                                     required
                                     className="w-full px-4 py-3 bg-white border border-neutral-300 text-neutral-900 focus:border-accent focus:outline-none transition-colors"
                                 >
-                                    <option value="">เลือกลักษณะงาน</option>
+                                    <option value="">{t("form.type_select")}</option>
                                     <option value="ui-design">UI Design</option>
                                     <option value="frontend-dev">
                                         Frontend Development
@@ -150,7 +149,7 @@ export default function Contact() {
                                     htmlFor="message"
                                     className="block text-sm font-medium text-neutral-700 mb-2"
                                 >
-                                    รายละเอียดเพิ่มเติม
+                                    {t("form.message")}
                                 </label>
                                 <textarea
                                     id="message"
@@ -160,7 +159,7 @@ export default function Contact() {
                                     required
                                     rows={5}
                                     className="w-full px-4 py-3 bg-white border border-neutral-300 text-neutral-900 focus:border-accent focus:outline-none transition-colors resize-none"
-                                    placeholder="เล่าให้ฟังสั้น ๆ ว่าต้องการทำอะไร มีปัญหาอะไรอยู่ หรือเป้าหมายของโปรเจกต์คืออะไร"
+                                    placeholder={t("form.message_placeholder")}
                                 />
                             </div>
 
@@ -171,11 +170,10 @@ export default function Contact() {
                                 }
                                 className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                {status === "sending" && "กำลังส่ง..."}
-                                {status === "sent" && "ส่งข้อความเรียบร้อย ✓"}
-                                {status === "idle" && "ส่งรายละเอียดโปรเจกต์"}
-                                {status === "error" &&
-                                    "เกิดข้อผิดพลาด กรุณาลองใหม่"}
+                                {status === "sending" && t("form.submit_sending")}
+                                {status === "sent" && t("form.submit_sent")}
+                                {status === "idle" && t("form.submit_idle")}
+                                {status === "error" && t("form.submit_error")}
                             </button>
                         </form>
                     </motion.div>
@@ -189,7 +187,7 @@ export default function Contact() {
                     >
                         <div>
                             <h3 className="text-xl font-semibold mb-4">
-                                ช่องทางอื่น ๆ
+                                {t("other_channels")}
                             </h3>
                             <div className="space-y-4">
                                 <a
@@ -236,25 +234,22 @@ export default function Contact() {
 
                         <div className="pt-8 border-t border-neutral-300">
                             <h3 className="text-xl font-semibold mb-4">
-                                ช่วงเวลาติดต่อ
+                                {t("contact_hours")}
                             </h3>
                             <p className="text-neutral-600 mb-2">
-                                จันทร์ - ศุกร์: 9:00 - 18:00
+                                {t("hours_mon_fri")}
                             </p>
                             <p className="text-neutral-600 mb-6">
-                                เสาร์ - อาทิตย์: ตามนัดหมาย
+                                {t("hours_sat_sun")}
                             </p>
                             <p className="text-sm text-neutral-500">
-                                ตอบกลับภายใน 24 ชั่วโมง
+                                {t("reply_time")}
                             </p>
                         </div>
 
                         <div className="pt-8 border-t border-neutral-300">
                             <p className="text-neutral-700 leading-relaxed">
-                                ยินดีพูดคุยทั้งงานใหม่ การปรับปรุงระบบเดิม
-                                หรือการให้คำปรึกษาเชิงเทคนิค
-                                สามารถติดต่อเข้ามาได้โดยไม่ต้องเตรียมข้อมูลครบถ้วนตั้งแต่ต้น
-                                เราสามารถช่วยจัดโครงสร้างความคิดและขอบเขตงานร่วมกันได้
+                                {t("closing_text")}
                             </p>
                         </div>
                     </motion.div>

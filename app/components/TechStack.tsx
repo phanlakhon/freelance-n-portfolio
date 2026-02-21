@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const techCategories = [
   {
@@ -30,14 +31,16 @@ const techCategories = [
 ];
 
 export default function TechStack() {
+  const t = useTranslations("TechStack");
+
   return (
     <section className="section-container section-spacing">
       <div className="max-w-3xl mb-16">
         <h2 className="heading-display text-display-md mb-6">
-          Tech Stack
+          {t("title")}
         </h2>
         <p className="text-lg text-neutral-600">
-          เครื่องมือและเทคโนโลยีที่เราเลือกใช้ เพื่อสร้าง System ที่แข็งแกร่งและมีประสิทธิภาพ
+          {t("description")}
         </p>
       </div>
 
