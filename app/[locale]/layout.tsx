@@ -3,6 +3,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "../../i18n/routing";
 import { Noto_Sans_Thai } from "next/font/google";
+import StructuredData from "../components/StructuredData";
 import "../globals.css";
 
 const notoSansThai = Noto_Sans_Thai({
@@ -22,6 +23,13 @@ export async function generateMetadata({
 
     return {
         metadataBase: new URL("https://phanlakhon-dev.vercel.app"),
+        alternates: {
+            canonical: `/${locale}`,
+            languages: {
+                en: "/en",
+                th: "/th",
+            },
+        },
         title: {
             default: t("title"),
             template: `%s | O. Phanlakhon`,
@@ -96,6 +104,7 @@ export default async function RootLayout({
     return (
         <html lang={locale} className={`${notoSansThai.variable}`}>
             <body className="font-sans" suppressHydrationWarning>
+                <StructuredData locale={locale} />
                 <NextIntlClientProvider messages={messages}>
                     {children}
                 </NextIntlClientProvider>
