@@ -11,7 +11,13 @@ export const projects: Project[] = [
         id: "p1",
         slug: "booking-engine",
         featured: true,
-        tech: ["React", "Next.js", "TailwindCSS", "Firebase", "API Integration"],
+        tech: [
+            "React",
+            "Next.js",
+            "TailwindCSS",
+            "Firebase",
+            "API Integration",
+        ],
         image: "/works/KONticket.png",
     },
     {
@@ -33,5 +39,12 @@ export const projects: Project[] = [
         slug: "automated-theme",
         featured: true,
         tech: ["PHP", "CSS", "JavaScript"],
+    },
+    {
+        id: "p5",
+        slug: "vc-investor-platform",
+        featured: true,
+        tech: ["React", "GSAP", "ScrollTrigger", "TypeScript", "TailwindCSS"],
+        image: "/works/vc-investor-platform.png",
     },
 ];

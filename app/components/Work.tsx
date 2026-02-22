@@ -8,7 +8,7 @@ import { projects } from "@/lib/projects";
 
 export default function Work() {
     const t = useTranslations("Work");
-    const featuredProjects = projects.filter((p) => p.featured);
+    const featuredProjects = projects.filter((p) => p.featured).slice(0, 3);
 
     return (
         <section id="work" className="section-container section-spacing">
@@ -100,7 +100,17 @@ export default function Work() {
                                 </div>
                             </div>
 
-                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-6 border-t border-neutral-200">
+                            <div className="flex flex-col items-start gap-6 pt-6 border-t border-neutral-200">
+                                <div className="flex flex-wrap gap-2">
+                                    {project.tech.map((tech) => (
+                                        <span
+                                            key={tech}
+                                            className="px-3 py-1 text-[10px] font-bold uppercase tracking-tight bg-neutral-100 text-neutral-600 border border-neutral-200"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
                                 <Link
                                     href={`/work/${project.slug}`}
                                     className="group inline-flex items-center text-sm font-bold uppercase tracking-wider text-neutral-900 hover:text-accent transition-colors duration-300"
@@ -120,17 +130,6 @@ export default function Work() {
                                         />
                                     </svg>
                                 </Link>
-
-                                <div className="flex flex-wrap gap-2">
-                                    {project.tech.map((tech) => (
-                                        <span
-                                            key={tech}
-                                            className="px-3 py-1 text-[10px] font-bold uppercase tracking-tight bg-neutral-100 text-neutral-600 border border-neutral-200"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
                             </div>
                         </div>
                     </motion.article>

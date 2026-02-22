@@ -55,7 +55,7 @@
         }
     },
     "Work": {
-        "title": "Featured Case Studies",
+        "title": "Projects I’ve worked on",
         "description": "A selection of professional projects where I led the frontend execution, focused on delivering measurable impact through engineering and architectural clarity.",
         "details_label": "The Challenge & Solution",
         "result_label": "Impact & Results",
@@ -89,6 +89,13 @@
                 "challenge": "Developed a scalable theme customization layer for a leading website builder platform to support rapid design iterations.",
                 "solution": "Engineered a flexible theme engine using PHP and modular CSS/JS patterns, allowing for decoupled UI updates from the core platform logic.",
                 "result": "Reduced theme deployment time by [X]% and enabled the design team to iterate autonomously without core system risks."
+            },
+            "p5": {
+                "title": "VC & Investor Storytelling Engine",
+                "category": "Investor Relations · High-Stakes Storytelling",
+                "challenge": "A startup needed a way to present complex metrics and long-term vision to potential investors without losing engagement.",
+                "solution": "Built a scroll-based narrative platform using GSAP and ScrollTrigger. Implemented animated metric counters and a dynamic timeline roadmap to tell the story visually.",
+                "result": "Secured $2.5M in seed funding, with investors citing the platform's clarity and presentation quality as a key factor."
             }
         }
     },
