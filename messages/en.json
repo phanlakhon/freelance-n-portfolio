@@ -59,6 +59,8 @@
         "description": "A selection of professional projects where I led the frontend execution, focused on delivering measurable impact through engineering and architectural clarity.",
         "details_label": "The Challenge & Solution",
         "result_label": "Impact & Results",
+        "see_all": "View All Case Studies",
+        "view_details": "Deep Dive into Case Study",
         "projects": {
             "p1": {
                 "title": "Enterprise Ticketing & Booking Engine",
