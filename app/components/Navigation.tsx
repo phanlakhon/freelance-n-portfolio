@@ -41,25 +41,25 @@ export default function Navigation() {
 
           <div className="hidden md:flex items-center gap-8">
             <Link
-              href="#services"
+              href="/#services"
               className="text-sm font-medium text-neutral-700 hover:text-accent transition-colors"
             >
               {t("services")}
             </Link>
             <Link
-              href="#work"
+              href="/#work"
               className="text-sm font-medium text-neutral-700 hover:text-accent transition-colors"
             >
               {t("work")}
             </Link>
             <Link
-              href="#about"
+              href="/#about"
               className="text-sm font-medium text-neutral-700 hover:text-accent transition-colors"
             >
               {t("about")}
             </Link>
             <Link
-              href="#contact"
+              href="/#contact"
               className="px-6 py-2.5 bg-primary text-white text-sm font-medium hover:bg-primary-light transition-colors"
             >
               {t("contact")}

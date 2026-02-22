@@ -1,438 +1,52 @@
 # Customization Guide
 
-This guide will help you personalize the portfolio website to match your brand and style.
+คู่มือการปรับแต่งเนื้อหาและดีไซน์เพื่อให้พอร์ตโฟลิโอสะท้อนถึงตัวตนและแบรนด์ของคุณ
 
-## 🎨 Brand Customization
+## 📝 1. การจัดการเนื้อหา (i18n)
+โปรเจกต์นี้ใช้ระบบ **next-intl** เพื่อรองรับหลายภาษา เนื้อหาที่เป็นข้อความทั้งหมดจะถูกเก็บไว้ในไฟล์ JSON ในโฟลเดอร์ `/messages`:
 
-### 1. Colors
+- **`messages/en.json`**: สำหรับเนื้อหาภาษาอังกฤษ
+- **`messages/th.json`**: สำหรับเนื้อหาภาษาไทย
 
-Edit `tailwind.config.ts`:
+**วิธีการแก้ไข:**
+1. ค้นหาส่วนที่ต้องการแก้ไข เช่น `Hero`, `Services`, หรือ `Work`
+2. แก้ไขข้อความใน JSON object ให้ตรงกับที่ต้องการ
+3. ตรวจสอบให้แน่ใจว่าทั้งสองไฟล์มีโครงสร้าง (Keys) ที่ตรงกัน
 
-```typescript
-colors: {
-  primary: {
-    DEFAULT: "#1a1a1a",  // Main dark color
-    light: "#2a2a2a",    // Hover state
-  },
-  accent: {
-    DEFAULT: "#c9a55c",  // Gold accent - CHANGE THIS
-    dark: "#b89440",     // Darker accent
-  },
-  // Or try other minimal luxury options:
-  // Muted blue: #7d9db5
-  // Deep charcoal: #3d3d3d
-  // Sage green: #9ba896
-  // Burgundy: #6b4949
-}
-```
-
-### 2. Typography
-
-The website uses two Google Fonts:
-- **Playfair Display**: Elegant serif for headings
-- **Inter**: Clean sans-serif for body text
-
-To change fonts, edit `app/layout.tsx`:
+## 💼 2. การจัดการผลงาน (Projects Metadata)
+ข้อมูลพื้นฐานของผลงาน (ที่ไม่ใช่เนื้อหาอธิบาย) จะถูกเก็บไว้ใน `/lib/projects.ts`:
 
 ```typescript
-// Example: Change to different Google Fonts
-import { Montserrat, Cormorant_Garamond } from "next/font/google";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
-});
-```
-
-Browse fonts: [Google Fonts](https://fonts.google.com)
-
-### 3. Spacing & Layout
-
-Adjust section spacing in `tailwind.config.ts`:
-
-```typescript
-spacing: {
-  "section": "clamp(4rem, 10vw, 8rem)", // Vertical padding
-  // Increase for more spacious feel:
-  // "section": "clamp(5rem, 12vw, 10rem)",
-},
-```
-
-## 📝 Content Customization
-
-### Hero Section (`app/components/Hero.tsx`)
-
-```typescript
-<h1 className="heading-display text-display-xl mb-8">
-  Your Main Headline       // Change this
-  <br />
-  <span className="text-neutral-600">Your Subheadline</span>
-</h1>
-
-<p className="text-lg md:text-xl text-neutral-600 max-w-2xl mb-12">
-  Your positioning statement and value proposition
-</p>
-
-// Update statistics
-<div>
-  <p className="text-3xl md:text-4xl font-display font-semibold mb-2">5+</p>
-  <p className="text-sm text-neutral-600">Years Experience</p>
-</div>
-```
-
-### Services Section (`app/components/Services.tsx`)
-
-Update the services array:
-
-```typescript
-const services = [
-  {
-    title: "Your Service Name",
-    description: "Detailed description of what you offer...",
-    outcomes: [
-      "Key benefit 1",
-      "Key benefit 2", 
-      "Key benefit 3"
-    ],
-  },
-  // Add or remove services as needed
+export const projects: Project[] = [
+    {
+        id: "p1",                 // ต้องตรงกับ Key ใน messages/*.json
+        slug: "booking-engine",   // ใช้สำหรับ URL (เช่น /work/booking-engine)
+        featured: true,           // แสดงผลในหน้าแรก
+        tech: ["React", "GSAP"],  // รายการเทคโนโลยี
+        image: "/works/img.png",  // รูปภาพ (อยู่ใน /public)
+    },
 ];
 ```
 
-### Portfolio Projects (`app/components/Work.tsx`)
-
-```typescript
-const projects = [
-  {
-    title: "Project Name",
-    category: "Project Type",
-    challenge: "What problem existed?",
-    solution: "How did you solve it?",
-    result: "Quantifiable results (percentages, metrics)",
-    tech: ["Technology 1", "Technology 2"],
-    image: "/your-project-image.jpg", // Add to /public
-  },
-];
-```
-
-**Portfolio Image Guidelines**:
-- Aspect ratio: 4:3 (e.g., 1200x900px)
-- Format: JPG or WebP
-- File size: < 200KB (compress)
-- Naming: `project-1.jpg`, `project-2.jpg`
-
-### About Section (`app/components/About.tsx`)
-
-Customize your philosophy and approach:
-
-```typescript
-<p className="text-xl text-neutral-700 leading-relaxed">
-  Your core belief about your work...
-</p>
-
-// Update work principles
-<ul className="space-y-2">
-  <li>Your principle 1</li>
-  <li>Your principle 2</li>
-</ul>
-```
-
-### Tech Stack (`app/components/TechStack.tsx`)
-
-```typescript
-const techCategories = [
-  {
-    category: "Category Name",
-    items: ["Tool 1", "Tool 2", "Tool 3"],
-  },
-];
-```
-
-### Contact Information (`app/components/Contact.tsx`)
-
-```typescript
-// Update email
-<a href="mailto:your.email@example.com">
-  your.email@example.com
-</a>
-
-// Update LINE ID
-<a href="https://line.me/ti/p/YOUR_LINE_ID">
-
-// Update working hours
-<p>Monday - Friday: 9:00 - 18:00</p>
-```
-
-## 🔧 Technical Customization
-
-### Navigation (`app/components/Navigation.tsx`)
-
-```typescript
-// Change brand name/logo
-<Link href="/" className="...">
-  O. Phanlakhon  // Or add <Image> for logo
-</Link>
-
-// Update menu items
-<Link href="#services">Services</Link>
-<Link href="#work">Work</Link>
-// Add or remove as needed
-```
-
-### Footer (`app/components/Footer.tsx`)
-
-```typescript
-// Social media links
-<a href="https://github.com/yourusername">
-<a href="https://linkedin.com/in/yourusername">
-
-// Add more platforms
-<a href="https://twitter.com/yourusername">
-  {/* Twitter icon SVG */}
-</a>
-```
-
-### SEO Metadata (`app/layout.tsx`)
-
-```typescript
-export const metadata: Metadata = {
-  title: "Your Name • Your Title",
-  description: "Your SEO description (150-160 characters)",
-  keywords: [
-    "Your keyword 1",
-    "Your keyword 2",
-    // Add relevant keywords
-  ],
-  metadataBase: new URL("https://phanlakhon-dev.vercel.app"),
-  // Update all URLs and social handles
-};
-```
-
-## 🖼️ Images & Assets
-
-### Required Images
-
-1. **Open Graph Image** (`/public/og-image.jpg`):
-   - Size: 1200x630px
-   - Shows when sharing on social media
-   - Include your name/brand
-
-2. **Favicon** (auto-generated by Next.js):
-   - Add `app/icon.png` or `app/icon.ico`
-   - Size: 32x32px or 16x16px
-
-3. **Project Images**:
-   - Add to `/public` folder
-   - Reference in Work component
-   - Optimize before uploading
-
-### Image Optimization Tips
-
-```bash
-# Using ImageOptim (Mac)
-# Using TinyPNG (Web)
-# Using Squoosh (Web)
-# Using CLI tool:
-npm install -g sharp-cli
-sharp -i input.jpg -o output.jpg --quality 80
-```
-
-## 🎭 Animation Customization
-
-### Adjust Animation Speed
-
-In component files, modify `transition` values:
-
-```typescript
-<motion.div
-  transition={{ 
-    duration: 0.8,  // Change speed (seconds)
-    delay: 0.2,     // Change delay
-    ease: "easeOut" // Change easing
-  }}
->
-```
-
-### Disable Animations
-
-If you prefer no animations:
-
-1. Remove `"use client"` from components
-2. Replace `<motion.div>` with `<div>`
-3. Remove Framer Motion imports
-
-Or globally reduce motion:
-
-```css
-/* In app/globals.css */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-```
-
-## 📱 Responsive Breakpoints
-
-Tailwind breakpoints:
-- `sm`: 640px
-- `md`: 768px
-- `lg`: 1024px
-- `xl`: 1280px
-
-Customize in `tailwind.config.ts`:
-
-```typescript
-screens: {
-  'sm': '640px',
-  'md': '768px',
-  'lg': '1024px',
-  'xl': '1280px',
-  '2xl': '1536px',
-}
-```
-
-## 🌐 Language Customization
-
-The template is in Thai by default. To change to English:
-
-1. Update all Thai text in components
-2. Change `lang` in `app/layout.tsx`:
-```typescript
-<html lang="en">
-```
-
-3. Update metadata:
-```typescript
-openGraph: {
-  locale: "en_US", // Change from th_TH
-}
-```
-
-## 🎨 Style Variations
-
-### Minimalist (Even Cleaner)
-
-```typescript
-// Reduce accent usage
-// Use only black, white, grays
-// Remove all borders
-// Increase white space
-```
-
-### Bold Luxury
-
-```typescript
-// Larger typography
-fontSize: {
-  "display-xl": ["clamp(4rem, 10vw, 7rem)", ...],
-}
-
-// Stronger accent color
-accent: {
-  DEFAULT: "#d4af37", // Brighter gold
-}
-```
-
-### Dark Mode Ready
-
-Add to `tailwind.config.ts`:
-
-```typescript
-darkMode: 'class',
-
-// Then use:
-className="bg-white dark:bg-neutral-900"
-```
-
-## 🚀 Performance Customization
-
-### Reduce Bundle Size
-
-Remove unused animations:
-
-```typescript
-// In components, keep only essential animations
-// Remove complex Framer Motion effects
-```
-
-### Optimize Fonts
-
-```typescript
-// Load only needed font weights
-const inter = Inter({
-  weight: ['400', '600'], // Instead of ['300', '400', '500', '600', '700']
-});
-```
-
-### Lazy Load Sections
-
-```typescript
-import dynamic from 'next/dynamic';
-
-const Work = dynamic(() => import('./components/Work'), {
-  loading: () => <p>Loading...</p>
-});
-```
-
-## 🔍 Analytics Integration
-
-### Google Analytics
-
-```typescript
-// app/layout.tsx
-import Script from 'next/script';
-
-export default function RootLayout({ children }) {
-  return (
-    <html>
-      <body>
-        {children}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX');
-          `}
-        </Script>
-      </body>
-    </html>
-  );
-}
-```
-
-## ✅ Customization Checklist
-
-Before launching:
-
-- [ ] Update all personal information (name, email, social links)
-- [ ] Replace placeholder project descriptions
-- [ ] Add real project images
-- [ ] Upload Open Graph image
-- [ ] Customize color scheme (if desired)
-- [ ] Update working hours and contact methods
-- [ ] Verify all links work
-- [ ] Test mobile responsiveness
-- [ ] Check spelling and grammar
-- [ ] Optimize and compress all images
-- [ ] Update metadata and SEO tags
-- [ ] Add favicon
-- [ ] Test contact form functionality
+## 🎨 3. การปรับแต่งดีไซน์ (Theming)
+การตั้งค่าสีและฟอนต์หลักจะอยู่ที่ `tailwind.config.ts`:
+
+- **สี (Colors):**
+    - `primary`: สีหลักของพื้นหลังและตัวอักษร
+    - `accent`: สีไฮไลท์ (ค่าเริ่มต้นคือสีทอง #c9a55c)
+- **ฟอนต์ (Typography):**
+    - แก้ไข `fontFamily` หากต้องการใช้ฟอนต์อื่น (อย่าลืมอัปเดตการโหลดฟอนต์ใน `app/[locale]/layout.tsx`)
+
+## 🔧 4. การจัดการ SEO & Metadata
+การตั้งค่า SEO หลักอยู่ที่ `app/[locale]/layout.tsx` ในฟังก์ชัน `generateMetadata`:
+
+- **Title & Description:** ดึงข้อมูลมาจาก `messages/*.json` ในส่วนของ `Metadata`
+- **Keywords:** ปรับเปลี่ยนรายการคำค้นหาที่ต้องการให้ติดอันดับ SEO
+- **Images:** เปลี่ยนไฟล์ `/public/og-image.jpg` สำหรับการแชร์ลง Social Media
+
+## 📱 5. ข้อมูลการติดต่อ
+แก้ไขที่ `messages/*.json` ในส่วนของ `Contact`:
+- อีเมล, ไอดี LINE, และชั่วโมงการทำงาน
 
 ---
-
-Take your time customizing. The goal is to make the website truly yours while maintaining the minimal luxury aesthetic!
+**Tip:** เมื่อมีการแก้ไขข้อมูลใน `lib/projects.ts` หรือ `messages/*.json` ระบบจะทำการอัปเดตหน้าเว็บให้โดยอัตโนมัติในโหมด Development
