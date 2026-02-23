@@ -8,9 +8,14 @@ import Image from "next/image";
 import ProjectDetailClient from "./ProjectDetailClient";
 
 export async function generateStaticParams() {
-    return projects.map((project) => ({
-        slug: project.slug,
-    }));
+    const locales = ["en", "th"];
+
+    return locales.flatMap((locale) =>
+        projects.map((project) => ({
+            locale,
+            slug: project.slug,
+        }))
+    );
 }
 
 export default async function ProjectPage(props: { params: Promise<{ slug: string; locale: string }> }) {
