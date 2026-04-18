@@ -14,9 +14,10 @@ export const projects: Project[] = [
         tech: [
             "React",
             "Next.js",
-            "TailwindCSS",
+            "Tailwind CSS",
             "Firebase",
             "API Integration",
+            "TypeScript"
         ],
         image: "/works/KONticket.png",
     },
@@ -24,27 +25,14 @@ export const projects: Project[] = [
         id: "p2",
         slug: "unified-platform",
         featured: true,
-        tech: ["Laravel", "Nuxt.js", "SCSS", "JavaScript", "API Integration"],
+        tech: ["Nuxt.js", "Vue.js", "Laravel", "SCSS", "Material UI", "JavaScript", "API Integration"],
         image: "/works/web-platform-frontend.png",
     },
     {
         id: "p3",
         slug: "b2b-ecommerce",
         featured: true,
-        tech: ["Laravel", "Nuxt.js", "SCSS", "JavaScript", "API Integration"],
+        tech: ["Nuxt.js", "Laravel", "SCSS", "JavaScript", "API Integration"],
         image: "/works/b2b.png",
-    },
-    {
-        id: "p4",
-        slug: "automated-theme",
-        featured: true,
-        tech: ["PHP", "CSS", "JavaScript"],
-    },
-    {
-        id: "p5",
-        slug: "vc-investor-platform",
-        featured: true,
-        tech: ["React", "GSAP", "ScrollTrigger", "TypeScript", "TailwindCSS"],
-        image: "/works/vc-investor-platform.png",
-    },
+    }
 ];

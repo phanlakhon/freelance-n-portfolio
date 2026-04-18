@@ -16,13 +16,13 @@ export default function Hero() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <p className="text-sm md:text-base font-medium tracking-[0.2em] uppercase text-neutral-500 mb-6">
-                        Personal Portfolio · Frontend-Focused Freelance
+                        {t("badge")}
                     </p>
 
                     <h1 className="heading-display text-display-xl mb-8 leading-tight">
-                        Frontend Architecture
+                        {t("title_1")}
                         <br className="hidden md:block" />
-                        with Clarity & Craft
+                        {t("title_2")}
                     </h1>
 
                     <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mb-12 leading-relaxed whitespace-pre-line">

@@ -5,23 +5,23 @@ export default function StructuredData({ locale }: { locale: string }) {
     
     const jsonLd = {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "O. Phanlakhon",
+        "@type": ["Person", "ProfessionalService"],
+        "name": "Oorathai Phanlakhon",
         "url": `https://phanlakhon-dev.vercel.app/${locale}`,
         "image": "https://phanlakhon-dev.vercel.app/og-image.jpg",
-        "jobTitle": "Senior Frontend Developer",
+        "jobTitle": "Freelance Web Developer & Frontend Developer",
         "description": t("description"),
         "sameAs": [
             "https://github.com/phanlakhon",
-            // Add other social links here
+            "https://linkedin.com/in/oorathai-phanlakhon-8a8667227"
         ],
         "knowsAbout": [
-            "Frontend Architecture",
             "React",
             "Next.js",
-            "UI/UX Design",
-            "Performance Optimization",
-            "API Integration"
+            "TypeScript",
+            "Tailwind CSS",
+            "REST API",
+            "Frontend Architecture"
         ]
     };
 

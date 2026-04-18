@@ -1,140 +1,126 @@
 {
-    "Common": {
-        "title": "Portfolio",
-        "switch_lang": "English"
-    },
-    "Metadata": {
-        "title": "Senior Frontend Engineer • Technical Consultant for Scalable Web Solutions",
-        "description": "Specializing in React ecosystem, architectural refactoring, and performance optimization. Delivering high-impact digital experiences through engineering excellence."
-    },
-    "Navigation": {
-        "services": "Services",
-        "work": "Expertise",
-        "about": "Vision",
-        "contact": "Contact"
-    },
-    "Hero": {
-        "badge": "Senior Frontend Engineer • Technical Consultant",
-        "title_1": "Engineering Scalable",
-        "title_2": "Frontend Architectures",
-        "description": "I specialize in transforming complex business requirements into maintainable, high-performance frontend systems. My approach combines architectural precision with a focus on long-term sustainability and user-centric design.",
-        "btn_discuss": "Discuss Your Strategy",
-        "btn_explore": "View Case Studies",
-        "feature_1_title": "Architecture-First",
-        "feature_1_desc": "Designing resilient systems that prioritize modularity, ensuring every technical decision supports rapid business scaling and team growth.",
-        "feature_2_title": "Performance Optimization",
-        "feature_2_desc": "Systematically reducing technical debt and enhancing system speed, resulting in measurable improvements in user retention and conversion.",
-        "feature_3_title": "Strategic Partnership",
-        "feature_3_desc": "Acting as a technical bridge between product vision and execution, providing consulting that goes beyond just writing code."
-    },
-    "Services": {
-        "title": "Core Technical Offerings",
-        "description": "I provide specialized frontend services designed to solve complex engineering challenges and drive product success.",
-        "items": {
-            "item1": {
-                "title": "Frontend Architecture & System Design",
-                "description": "Architecting robust frontend foundations using modern frameworks. I focus on creating scalable structures that are easy to navigate and maintain by growing engineering teams.",
-                "outcome1": "Reduced architectural complexity",
-                "outcome2": "Accelerated development velocity",
-                "outcome3": "Enhanced system maintainability"
-            },
-            "item2": {
-                "title": "Legacy System Modernization",
-                "description": "Analyzing and refactoring mission-critical frontend systems to eliminate technical debt, improve stability, and boost overall application performance.",
-                "outcome1": "Optimized Core Web Vitals",
-                "outcome2": "Stabilized legacy codebases",
-                "outcome3": "Improved developer experience"
-            },
-            "item3": {
-                "title": "Strategic API & Workflow Integration",
-                "description": "Designing seamless integration layers between frontend and complex backend services, focusing on data integrity and automated state management workflows.",
-                "outcome1": "Reliable real-time data flow",
-                "outcome2": "Automated frontend workflows",
-                "outcome3": "Consistent cross-platform UX"
-            }
-        }
-    },
-    "Work": {
-        "title": "Projects I’ve worked on",
-        "description": "A selection of professional projects where I led the frontend execution, focused on delivering measurable impact through engineering and architectural clarity.",
-        "details_label": "The Challenge & Solution",
-        "result_label": "Impact & Results",
-        "see_all": "View All Case Studies",
-        "view_details": "Deep Dive into Case Study",
-        "projects": {
-            "p1": {
-                "title": "Enterprise Ticketing & Booking Engine",
-                "category": "Frontend Architecture · Production System",
-                "challenge": "Built a high-stakes booking platform from the ground up, requiring real-time availability sync and secure payment orchestration.",
-                "solution": "Architected the frontend using React/Next.js and TailwindCSS. Engineered a robust state management system to handle real-time concurrency and integrated Firebase for live data updates.",
-                "result": "Launched a production-ready system capable of handling thousands of concurrent bookings with seamless stability."
-            },
-            "p2": {
-                "title": "Unified Admin & Customer Platform",
-                "category": "Full-Stack Orchestration · Frontend Lead",
-                "challenge": "Developed a synchronized platform ecosystem requiring a complex administrative dashboard and a high-traffic customer-facing site.",
-                "solution": "Leveraged Nuxt.js and SCSS to build a modular component library. Designed a unified data layer to ensure consistent state across the administration and user-facing environments.",
-                "result": "Delivered a scalable foundation that allowed the product team to ship new features [X]% faster without increasing technical debt."
-            },
-            "p3": {
-                "title": "B2B E-Commerce Solution",
-                "category": "High-Performance Web Development",
-                "challenge": "Engineered a B2B commerce platform focused on data-heavy product catalogs and complex enterprise procurement workflows.",
-                "solution": "Optimized frontend performance using Nuxt.js and Nuxt Image. Streamlined the procurement journey through intuitive UX patterns and efficient API data fetching strategies.",
-                "result": "Successfully deployed a stable, business-centric platform that improved data clarity for corporate users."
-            },
-            "p4": {
-                "title": "Igetweb – Automated Theme Engine",
-                "category": "Internal Tooling · Systems Engineering",
-                "challenge": "Developed a scalable theme customization layer for a leading website builder platform to support rapid design iterations.",
-                "solution": "Engineered a flexible theme engine using PHP and modular CSS/JS patterns, allowing for decoupled UI updates from the core platform logic.",
-                "result": "Reduced theme deployment time by [X]% and enabled the design team to iterate autonomously without core system risks."
-            },
-            "p5": {
-                "title": "VC & Investor Storytelling Engine",
-                "category": "Investor Relations · High-Stakes Storytelling",
-                "challenge": "A startup needed a way to present complex metrics and long-term vision to potential investors without losing engagement.",
-                "solution": "Built a scroll-based narrative platform using GSAP and ScrollTrigger. Implemented animated metric counters and a dynamic timeline roadmap to tell the story visually.",
-                "result": "Secured $2.5M in seed funding, with investors citing the platform's clarity and presentation quality as a key factor."
-            }
-        }
-    },
-    "About": {
-        "para1": "I believe that exceptional software is built on the foundation of intentional design and architectural clarity. Every line of code should serve a purpose, balancing immediate performance with long-term scalability.",
-        "para2": "As an engineer, my mission is to eliminate complexity and build systems that are not only functional but also a joy to work with. I prioritize maintainability and clean abstractions in every project I undertake."
-    },
-    "TechStack": {
-        "title": "Technical Arsenal",
-        "description": "A curated set of technologies and tools I utilize to build resilient and efficient digital products."
-    },
-    "Contact": {
-        "title": "Let’s Strategize",
-        "description": "Whether you're looking to architect a new platform, optimize a legacy system, or need technical consulting, I'm here to help you achieve your engineering goals.",
-        "form": {
-            "name": "Full Name",
-            "name_placeholder": "e.g., Jane Doe",
-            "email": "Email Address",
-            "email_placeholder": "your@email.com",
-            "type": "Project Objective",
-            "type_select": "Select Project Type",
-            "message": "Project Details",
-            "message_placeholder": "Briefly describe your goals, current technical challenges, or the impact you're looking to achieve.",
-            "submit_idle": "Send Project Brief",
-            "submit_sending": "Transmitting...",
-            "submit_sent": "Message Sent Successfully ✓",
-            "submit_error": "An error occurred. Please try again."
-        },
-        "other_channels": "Alternative Channels",
-        "contact_hours": "Consultation Hours",
-        "hours_mon_fri": "Mon - Fri: 9:00 - 18:00 (GMT+7)",
-        "hours_sat_sun": "Sat - Sun: By Appointment",
-        "reply_time": "Response within 24 hours",
-        "closing_text": "I am open to discussing high-impact projects, system optimizations, or long-term technical advisory. Let's work together to build something exceptional."
-    },
-    "Footer": {
-        "desc": "Senior Frontend Engineer & Technical Consultant. Partnering with businesses to build production-grade systems.",
-        "nav_title": "Navigation",
-        "connect_title": "Connect",
-        "freelance_status": "Currently available for high-impact frontend and optimization projects."
+  "Common": {
+    "title": "Portfolio",
+    "switch_lang": "English"
+  },
+  "Metadata": {
+    "title": "Freelance Web Developer • React & Next.js Expert | Oorathai P.",
+    "description": "Freelance Frontend Developer with 4+ years of experience specializing in React & Next.js. Building scalable websites and applications (Portfolio: Concert Ticketing, E-Commerce)."
+  },
+  "Navigation": {
+    "services": "Services",
+    "work": "Expertise",
+    "about": "Vision",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "badge": "Frontend Developer · 4+ Years Experience",
+    "title_1": "Building High-Performance",
+    "title_2": "Web Applications",
+    "description": "4+ years of frontend expertise in React & Next.js, delivering scalable digital solutions from concept to production that handle large numbers of users.",
+    "btn_discuss": "Discuss Your Strategy",
+    "btn_explore": "View Case Studies",
+    "feature_1_title": "Scalable Architecture",
+    "feature_1_desc": "Designing resilient codebases that prioritize modularity, ensuring technical decisions support rapid scaling and team growth.",
+    "feature_2_title": "Performance Optimization",
+    "feature_2_desc": "Systematically reducing technical debt and enhancing system speed, resulting in measurable improvements in user experience.",
+    "feature_3_title": "Practical Execution",
+    "feature_3_desc": "Tackling complex challenges with the right technological choices, specialized in high-demand web platform architectures."
+  },
+  "Services": {
+    "title": "Freelance Services",
+    "description": "I provide specialized frontend services from architecting new platforms to rescuing legacy systems.",
+    "items": {
+      "item1": {
+        "title": "Web App Development",
+        "description": "Building modern websites from scratch using Next.js and React. Focus on speed, SEO, and creating scalable component structures.",
+        "outcome1": "Fast & SEO-optimized",
+        "outcome2": "Ready for new features",
+        "outcome3": "Mobile Responsive"
+      },
+      "item2": {
+        "title": "Large-scale Frontend",
+        "description": "Architecting robust frontend foundations for complex web platforms such as E-commerce portals and Concert Ticketing systems.",
+        "outcome1": "Precise state management",
+        "outcome2": "Highly concurrent",
+        "outcome3": "System stability"
+      },
+      "item3": {
+        "title": "API Integration & Fixes",
+        "description": "Fixing bugs and seamlessly connecting your frontend with complex backend REST APIs, reducing technical debt.",
+        "outcome1": "Reliable data flow",
+        "outcome2": "Cleaner codebases",
+        "outcome3": "Fewer UI bugs"
+      }
     }
+  },
+  "Work": {
+    "title": "Selected Projects",
+    "description": "A selection of projects where I led frontend execution, solving complex requirements.",
+    "details_label": "Responsibilities",
+    "result_label": "The Challenge",
+    "see_all": "View Github",
+    "view_details": "Deep Dive into Case Study",
+    "projects": {
+      "p1": {
+        "title": "KONticket — Concert Ticketing",
+        "category": "Frontend Architecture · Production System",
+        "challenge": "The system needed to support huge traffic spikes during high-demand sales periods without failing during the booking process.",
+        "solution": "Built ticket browsing, seat selection, and booking flows using React and Next.js. Connected frontend with backend services utilizing React Query / SWR for real-time synchronization.",
+        "result": "Stable operation for large ticket events."
+      },
+      "p2": {
+        "title": "Unified Admin & Platform",
+        "category": "Nuxt.js · Website Platform",
+        "challenge": "A synchronized platform ecosystem requiring an admin dashboard and a high-traffic customer-facing site.",
+        "solution": "Built reusable UI components across different parts of the platform using Nuxt.js/Vue.js. Collaborated closely with Laravel backend devs to integrate APIs.",
+        "result": "Unified ecosystem and data layer."
+      },
+      "p3": {
+        "title": "B2B E-Commerce",
+        "category": "High-Performance Web Development",
+        "challenge": "B2B commerce platform focused on data-heavy product catalogs and complex procurement procedures.",
+        "solution": "Created user interfaces addressing large volumes of data using Nuxt.js and SCSS. Optimized ordering and product management processes.",
+        "result": "Streamlined data-heavy procurement."
+      }
+    }
+  },
+  "About": {
+    "para1": "Oorathai Phanlakhon — I am a Frontend Developer with 4+ years of experience specializing in the React Ecosystem (Next.js, TypeScript).",
+    "para2": "I have been part of core teams building highly concurrent systems like concert ticketing sites. My fundamental goal is delivering clean code and providing the smoothest user experience possible."
+  },
+  "TechStack": {
+    "title": "Technical Arsenal",
+    "description": "Curated technologies I utilize to build resilient digital products."
+  },
+  "Contact": {
+    "title": "Let’s Build Something",
+    "description": "Looking for a freelance frontend developer for your project? Let's discuss your requirements.",
+    "form": {
+      "name": "Full Name",
+      "name_placeholder": "e.g., Jane Doe",
+      "email": "Email",
+      "email_placeholder": "your@email.com",
+      "type": "Project Objective",
+      "type_select": "Select Project Type",
+      "message": "Project Details",
+      "message_placeholder": "Tell me about your project, current setup, or the frontend challenges you are facing.",
+      "submit_idle": "Send Message",
+      "submit_sending": "Transmitting...",
+      "submit_sent": "Message Sent Successfully ✓",
+      "submit_error": "An error occurred. Please try again."
+    },
+    "other_channels": "Alternative Channels",
+    "contact_hours": "Email",
+    "hours_mon_fri": "phanlakhon.ort@gmail.com",
+    "hours_sat_sun": "+66 96 886 3116",
+    "reply_time": "Response within 24 hours.",
+    "closing_text": "I am open to answering technical questions free of charge. Let's chat!"
+  },
+  "Footer": {
+    "desc": "Freelance Frontend Developer. Partnering with businesses to build production-grade web systems.",
+    "nav_title": "Navigation",
+    "connect_title": "Connect",
+    "freelance_status": "Currently available for freelance development and consulting."
+  }
 }
