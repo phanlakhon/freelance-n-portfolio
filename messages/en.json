@@ -108,7 +108,8 @@
       "submit_idle": "Send Message",
       "submit_sending": "Transmitting...",
       "submit_sent": "Message Sent Successfully ✓",
-      "submit_error": "An error occurred. Please try again."
+      "submit_error": "An error occurred. Please try again.",
+      "submit_success_note": "Refresh the page to send another message."
     },
     "other_channels": "Alternative Channels",
     "contact_hours": "Email",
