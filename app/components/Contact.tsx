@@ -13,7 +13,6 @@ export default function Contact() {
         message: "",
     });
 
-    const isImplemented = true;
     const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
         "idle",
     );
@@ -22,12 +21,25 @@ export default function Contact() {
         e.preventDefault();
         setStatus("sending");
 
-        // Simulate form submission - replace with actual API call
-        setTimeout(() => {
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed");
+            }
+
             setStatus("sent");
             setFormData({ name: "", email: "", projectType: "", message: "" });
-            setTimeout(() => setStatus("idle"), 3000);
-        }, 1500);
+            // ลบ setTimeout("idle", 4000) ทิ้งไปเลย เพื่อล็อกสถานะไว้ที่ "sent" แบบถาวร
+        } catch (error) {
+            console.error("Form transmission error: ", error);
+            setStatus("error");
+            setTimeout(() => setStatus("idle"), 5000);
+        }
     };
 
     const handleChange = (
@@ -165,16 +177,20 @@ export default function Contact() {
 
                             <button
                                 type="submit"
-                                disabled={
-                                    status === "sending" || isImplemented
-                                }
-                                className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                                disabled={status === "sending" || status === "sent"}
+                                className={`w-full ${status === "sent" ? "bg-green-600 text-white border-green-600" : "btn-primary"} disabled:opacity-50 disabled:cursor-not-allowed`}
                             >
                                 {status === "sending" && t("form.submit_sending")}
                                 {status === "sent" && t("form.submit_sent")}
                                 {status === "idle" && t("form.submit_idle")}
                                 {status === "error" && t("form.submit_error")}
                             </button>
+                            
+                            {status === "sent" && (
+                                <p className="text-center text-sm text-neutral-500 pt-2">
+                                    {t("form.submit_success_note")}
+                                </p>
+                            )}
                         </form>
                     </motion.div>
 
