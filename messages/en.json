@@ -10,6 +10,7 @@
   "Navigation": {
     "services": "Services",
     "work": "Expertise",
+    "products": "Products",
     "about": "Vision",
     "contact": "Contact"
   },
@@ -92,6 +93,56 @@
   "TechStack": {
     "title": "Technical Arsenal",
     "description": "Curated technologies I utilize to build resilient digital products."
+  },
+  "Products": {
+    "metadata_title": "Canva Website Templates for Small Shops & Creative Businesses",
+    "metadata_description": "Browse Canva website templates, small shop website templates, and practical digital resources for florists, makers, freelancers, and creative small businesses.",
+    "badge": "Canva Templates · Website Templates · Small Shop Resources",
+    "title": "Canva Website Templates for Small Shops and Creative Businesses",
+    "description": "Browse editable Canva website templates and digital resources made for small shops, florists, makers, and service-based businesses that want a polished online presence without starting from a blank page.",
+    "collection_label": "Website templates and digital resources",
+    "collection_title": "Canva templates for small business websites",
+    "product_count": "{count, plural, =0 {No products available yet} one {# product available} other {# products available}}",
+    "buy_button": "Buy Now",
+    "details_button": "View Details",
+    "empty": {
+      "missing_token": {
+        "title": "Products are coming soon",
+        "description": "The shop is being prepared. Please check back soon for templates and digital resources."
+      },
+      "error": {
+        "title": "Products are temporarily unavailable",
+        "description": "The product list could not be loaded right now. Please check back again shortly."
+      },
+      "ready": {
+        "title": "No published products yet",
+        "description": "New templates and digital resources will be added here soon."
+      }
+    },
+    "faq_label": "FAQ",
+    "faq_title": "Before you buy",
+    "faq": {
+      "item1": {
+        "question": "How will I receive the product?",
+        "answer": "After checkout, you will receive a receipt and secure access to your files or product page. You can return to your purchase anytime through your customer account."
+      },
+      "item2": {
+        "question": "Can I use these products for client or business projects?",
+        "answer": "Most products are created for practical personal, freelance, or small business workflows. Please check the product detail page for any product-specific usage notes."
+      },
+      "item3": {
+        "question": "What if I have a question before or after buying?",
+        "answer": "You can contact me through the channels on this website. I am happy to clarify whether a product fits your workflow before you purchase."
+      }
+    }
+  },
+  "ProductDetail": {
+    "back": "Back to products",
+    "price": "Price",
+    "buy": "Buy Now",
+    "why_label": "Product Guide",
+    "why_title": "A clearer way to decide if this website template fits your business",
+    "fallback_description": "Visit the checkout page for the latest product details, file contents, and usage notes."
   },
   "Contact": {
     "title": "Let’s Build Something",

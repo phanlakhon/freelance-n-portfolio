@@ -53,6 +53,12 @@ export default function Navigation() {
               {t("work")}
             </Link>
             <Link
+              href="/products"
+              className="text-sm font-medium text-neutral-700 hover:text-accent transition-colors"
+            >
+              {t("products")}
+            </Link>
+            <Link
               href="/#about"
               className="text-sm font-medium text-neutral-700 hover:text-accent transition-colors"
             >

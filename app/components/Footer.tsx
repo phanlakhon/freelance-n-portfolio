@@ -28,7 +28,7 @@ export default function Footer() {
                         <ul className="space-y-3 text-sm">
                             <li>
                                 <Link
-                                    href="#services"
+                                    href="/#services"
                                     className="text-neutral-300 hover:text-accent transition-colors"
                                 >
                                     {tNav("services")}
@@ -36,7 +36,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link
-                                    href="#work"
+                                    href="/#work"
                                     className="text-neutral-300 hover:text-accent transition-colors"
                                 >
                                     {tNav("work")}
@@ -44,7 +44,15 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link
-                                    href="#about"
+                                    href="/products"
+                                    className="text-neutral-300 hover:text-accent transition-colors"
+                                >
+                                    {tNav("products")}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/#about"
                                     className="text-neutral-300 hover:text-accent transition-colors"
                                 >
                                     {tNav("about")}
@@ -52,7 +60,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link
-                                    href="#contact"
+                                    href="/#contact"
                                     className="text-neutral-300 hover:text-accent transition-colors"
                                 >
                                     {tNav("contact")}
