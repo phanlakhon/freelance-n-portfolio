@@ -71,7 +71,7 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
     const t = await getTranslations({ locale, namespace: "Work" });
 
     return (
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen bg-white dark:bg-neutral-950">
             <Navigation />
             
             <ProjectDetailClient 

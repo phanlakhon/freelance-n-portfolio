@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ExternalLink, PackageOpen } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import Navigation from "../../../components/Navigation";
 import Footer from "../../../components/Footer";
@@ -11,6 +11,7 @@ import {
 } from "@/lib/gumroad";
 import { getProductSeoContent, getProductSlug } from "@/lib/product-seo";
 import { Link } from "@/i18n/routing";
+import ProductGallery from "./ProductGallery";
 
 export const revalidate = 3600;
 
@@ -86,9 +87,6 @@ export default async function ProductDetailPage({
     const content = getProductSeoContent(product, locale);
     const imageUrl = getProductImageUrl(product);
     const description = stripHtml(product.custom_summary ?? product.description);
-    const gallery = product.covers
-        .filter((cover) => cover.type === "image" && cover.url)
-        .slice(0, 4);
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Product",
@@ -144,45 +142,18 @@ export default async function ProductDetailPage({
             <section className="section-container pt-32 pb-16">
                 <Link
                     href="/products"
-                    className="mb-10 inline-flex items-center gap-2 text-sm font-medium text-neutral-600 hover:text-accent transition-colors"
+                    className="mb-10 inline-flex items-center gap-2 text-sm font-medium text-neutral-600 hover:text-accent transition-colors dark:text-neutral-300"
                 >
                     <ArrowLeft className="w-4 h-4" />
                     {t("back")}
                 </Link>
 
                 <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-start">
-                    <div className="min-w-0">
-                        <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100 border border-neutral-200">
-                            {imageUrl ? (
-                                <img
-                                    src={imageUrl}
-                                    alt={product.name}
-                                    className="h-full w-full object-cover"
-                                />
-                            ) : (
-                                <div className="flex h-full items-center justify-center">
-                                    <PackageOpen className="w-16 h-16 text-neutral-300" />
-                                </div>
-                            )}
-                        </div>
-
-                        {gallery.length > 1 && (
-                            <div className="mt-4 grid grid-cols-4 gap-3">
-                                {gallery.map((cover) => (
-                                    <div
-                                        key={cover.id}
-                                        className="aspect-[4/3] overflow-hidden bg-neutral-100 border border-neutral-200"
-                                    >
-                                        <img
-                                            src={cover.url ?? ""}
-                                            alt=""
-                                            className="h-full w-full object-cover"
-                                        />
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                    </div>
+                    <ProductGallery
+                        productName={product.name}
+                        imageUrl={imageUrl}
+                        covers={product.covers}
+                    />
 
                     <div className="min-w-0">
                         <p className="break-words text-xs md:text-base font-medium tracking-[0.12em] md:tracking-[0.2em] uppercase text-accent mb-5">
@@ -191,15 +162,15 @@ export default async function ProductDetailPage({
                         <h1 className="heading-display text-display-md mb-6 break-words">
                             {product.name}
                         </h1>
-                        <p className="text-lg text-neutral-600 leading-relaxed mb-8">
+                        <p className="text-lg text-neutral-600 leading-relaxed mb-8 dark:text-neutral-300">
                             {content.intro}
                         </p>
 
-                        <div className="mb-8 border-y border-neutral-200 py-6">
-                            <p className="text-sm uppercase tracking-widest text-neutral-500 mb-2">
+                        <div className="mb-8 border-y border-neutral-200 py-6 dark:border-neutral-800">
+                            <p className="text-sm uppercase tracking-widest text-neutral-500 mb-2 dark:text-neutral-400">
                                 {t("price")}
                             </p>
-                            <p className="text-2xl font-semibold text-neutral-900">
+                            <p className="text-2xl font-semibold text-neutral-900 dark:text-neutral-100">
                                 {product.formatted_price}
                             </p>
                         </div>
@@ -214,14 +185,14 @@ export default async function ProductDetailPage({
                             <ExternalLink className="w-4 h-4" />
                         </a>
 
-                        <p className="mt-4 text-sm text-neutral-500 leading-relaxed">
+                        <p className="mt-4 text-sm text-neutral-500 leading-relaxed dark:text-neutral-400">
                             {content.note}
                         </p>
                     </div>
                 </div>
             </section>
 
-            <section className="section-container py-16 md:py-section bg-neutral-50">
+            <section className="section-container py-16 md:py-section bg-neutral-50 dark:bg-neutral-900">
                 <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-14">
                     <div>
                         <p className="text-sm font-medium tracking-widest uppercase text-accent mb-4">
@@ -230,13 +201,13 @@ export default async function ProductDetailPage({
                         <h2 className="heading-display text-display-md mb-6">
                             {t("why_title")}
                         </h2>
-                        <p className="text-neutral-600 leading-relaxed">
+                        <p className="text-neutral-600 leading-relaxed dark:text-neutral-300">
                             {content.originalTake}
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
-                        <div className="bg-white border border-neutral-200 p-7">
+                        <div className="bg-white border border-neutral-200 p-7 dark:bg-neutral-950 dark:border-neutral-800">
                             <h3 className="text-xl font-semibold mb-5">
                                 {content.audienceTitle}
                             </h3>
@@ -244,7 +215,7 @@ export default async function ProductDetailPage({
                                 {content.audience.map((item) => (
                                     <li
                                         key={item}
-                                        className="flex gap-3 text-sm text-neutral-700 leading-relaxed"
+                                        className="flex gap-3 text-sm text-neutral-700 leading-relaxed dark:text-neutral-300"
                                     >
                                         <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
                                         <span>{item}</span>
@@ -253,7 +224,7 @@ export default async function ProductDetailPage({
                             </ul>
                         </div>
 
-                        <div className="bg-white border border-neutral-200 p-7">
+                        <div className="bg-white border border-neutral-200 p-7 dark:bg-neutral-950 dark:border-neutral-800">
                             <h3 className="text-xl font-semibold mb-5">
                                 {content.valueTitle}
                             </h3>
@@ -261,7 +232,7 @@ export default async function ProductDetailPage({
                                 {content.valuePoints.map((item) => (
                                     <li
                                         key={item}
-                                        className="flex gap-3 text-sm text-neutral-700 leading-relaxed"
+                                        className="flex gap-3 text-sm text-neutral-700 leading-relaxed dark:text-neutral-300"
                                     >
                                         <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
                                         <span>{item}</span>
@@ -283,12 +254,12 @@ export default async function ProductDetailPage({
                             {content.workflow.map((step, index) => (
                                 <div
                                     key={step}
-                                    className="flex gap-5 border-b border-neutral-200 pb-5 last:border-b-0"
+                                    className="flex gap-5 border-b border-neutral-200 pb-5 last:border-b-0 dark:border-neutral-800"
                                 >
                                     <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center bg-neutral-900 text-sm font-semibold text-white">
                                         {index + 1}
                                     </span>
-                                    <p className="text-neutral-700 leading-relaxed">
+                                    <p className="text-neutral-700 leading-relaxed dark:text-neutral-300">
                                         {step}
                                     </p>
                                 </div>
@@ -296,11 +267,11 @@ export default async function ProductDetailPage({
                         </div>
                     </div>
 
-                    <div className="bg-neutral-50 border border-neutral-200 p-8">
+                    <div className="bg-neutral-50 border border-neutral-200 p-8 dark:bg-neutral-900 dark:border-neutral-800">
                         <h2 className="text-2xl font-display font-semibold mb-5">
                             {content.gumroadTitle}
                         </h2>
-                        <p className="text-neutral-600 leading-relaxed mb-6">
+                        <p className="text-neutral-600 leading-relaxed mb-6 dark:text-neutral-300">
                             {description || t("fallback_description")}
                         </p>
                         {product.tags.length > 0 && (
@@ -308,7 +279,7 @@ export default async function ProductDetailPage({
                                 {product.tags.map((tag) => (
                                     <span
                                         key={tag}
-                                        className="max-w-full truncate px-3 py-1 text-[10px] font-bold uppercase tracking-tight bg-white text-neutral-600 border border-neutral-200"
+                                        className="max-w-full truncate px-3 py-1 text-[10px] font-bold uppercase tracking-tight bg-white text-neutral-600 border border-neutral-200 dark:bg-neutral-950 dark:text-neutral-300 dark:border-neutral-800"
                                     >
                                         {tag}
                                     </span>

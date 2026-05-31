@@ -9,14 +9,14 @@ export default function Footer() {
     const tNav = useTranslations("Navigation");
 
     return (
-        <footer className="bg-neutral-900 text-white">
+        <footer className="border-t border-neutral-800 bg-neutral-900 text-white dark:border-neutral-700 dark:bg-neutral-950">
             <div className="section-container py-16">
                 <div className="grid md:grid-cols-[1.2fr_0.8fr_1fr] gap-16 mb-16">
                     <div>
                         <h3 className="text-2xl font-display font-semibold mb-4">
                             O. Phanlakhon
                         </h3>
-                        <p className="text-neutral-400 leading-relaxed text-sm max-w-[90%]">
+                        <p className="text-neutral-400 leading-relaxed text-sm max-w-[90%] md:max-w-none">
                             {t("desc")}
                         </p>
                     </div>

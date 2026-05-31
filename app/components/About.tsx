@@ -7,7 +7,7 @@ export default function About() {
   const t = useTranslations("About");
 
   return (
-    <section id="about" className="section-container section-spacing bg-neutral-50">
+    <section id="about" className="section-container section-spacing bg-neutral-50 dark:bg-neutral-900">
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -16,11 +16,11 @@ export default function About() {
           transition={{ duration: 0.7 }}
         >
           <div className="space-y-6 text-center md:text-left">
-            <p className="text-xl text-neutral-700 leading-relaxed">
+            <p className="text-xl text-neutral-700 leading-relaxed dark:text-neutral-200">
               {t("para1")}
             </p>
 
-            <p className="text-lg text-neutral-600 leading-relaxed">
+            <p className="text-lg text-neutral-600 leading-relaxed dark:text-neutral-300">
               {t("para2")}
             </p>
           </div>

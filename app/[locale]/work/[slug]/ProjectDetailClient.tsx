@@ -27,9 +27,9 @@ export default function ProjectDetailClient({
     resultLabel,
 }: Props) {
     return (
-        <section className="bg-white">
+        <section className="bg-white dark:bg-neutral-950">
             {/* Header / Hero Section */}
-            <div className="relative pt-32 pb-20 border-b border-neutral-100 overflow-hidden">
+            <div className="relative pt-32 pb-20 border-b border-neutral-100 overflow-hidden dark:border-neutral-800">
                 <div className="section-container relative z-10">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -38,7 +38,7 @@ export default function ProjectDetailClient({
                     >
                         <Link
                             href="/work"
-                            className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-neutral-400 hover:text-accent transition-colors duration-300"
+                            className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-neutral-400 hover:text-accent transition-colors duration-300 dark:text-neutral-500"
                         >
                             <svg
                                 className="mr-2 w-4 h-4 rotate-180"
@@ -83,7 +83,7 @@ export default function ProjectDetailClient({
                         {project.tech.map((tech) => (
                             <span
                                 key={tech}
-                                className="px-4 py-1.5 text-[11px] font-bold uppercase tracking-wide bg-neutral-900 text-white"
+                                className="px-4 py-1.5 text-[11px] font-bold uppercase tracking-wide bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-950"
                             >
                                 {tech}
                             </span>
@@ -91,7 +91,7 @@ export default function ProjectDetailClient({
                     </motion.div>
                 </div>
                 
-                <div className="absolute top-0 right-0 w-1/3 h-full bg-neutral-50/50 -skew-x-12 transform translate-x-20 hidden lg:block -z-10"></div>
+                <div className="absolute top-0 right-0 w-1/3 h-full bg-neutral-50/50 -skew-x-12 transform translate-x-20 hidden lg:block -z-10 dark:bg-neutral-900/60"></div>
             </div>
 
             {/* Featured Image Section */}
@@ -100,7 +100,7 @@ export default function ProjectDetailClient({
                     initial={{ opacity: 0, scale: 0.98 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="relative aspect-[16/9] bg-neutral-100 border border-neutral-200 shadow-2xl overflow-hidden"
+                    className="relative aspect-[16/9] bg-neutral-100 border border-neutral-200 shadow-2xl overflow-hidden dark:bg-neutral-900 dark:border-neutral-800"
                 >
                     {project.image ? (
                         <Image
@@ -131,13 +131,13 @@ export default function ProjectDetailClient({
                             viewport={{ once: true }}
                             className="space-y-6"
                         >
-                            <h2 className="text-sm font-bold uppercase tracking-widest text-neutral-400 border-b border-neutral-100 pb-4">
+                            <h2 className="text-sm font-bold uppercase tracking-widest text-neutral-400 border-b border-neutral-100 pb-4 dark:border-neutral-800">
                                 {detailsLabel}
                             </h2>
-                            <p className="text-xl text-neutral-800 leading-relaxed font-light">
+                            <p className="text-xl text-neutral-800 leading-relaxed font-light dark:text-neutral-200">
                                 {challenge}
                             </p>
-                            <p className="text-lg text-neutral-600 leading-relaxed">
+                            <p className="text-lg text-neutral-600 leading-relaxed dark:text-neutral-300">
                                 {solution}
                             </p>
                         </motion.div>
@@ -146,12 +146,12 @@ export default function ProjectDetailClient({
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="p-10 bg-neutral-50 border-l-4 border-accent space-y-6 shadow-sm"
+                            className="p-10 bg-neutral-50 border-l-4 border-accent space-y-6 shadow-sm dark:bg-neutral-900"
                         >
                             <h2 className="text-sm font-bold uppercase tracking-widest text-accent">
                                 {resultLabel}
                             </h2>
-                            <p className="text-2xl font-display font-medium text-neutral-900 leading-snug">
+                            <p className="text-2xl font-display font-medium text-neutral-900 leading-snug dark:text-neutral-100">
                                 {result}
                             </p>
                         </motion.div>
@@ -164,12 +164,12 @@ export default function ProjectDetailClient({
                             viewport={{ once: true }}
                             className="space-y-6"
                         >
-                            <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-900">
+                            <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-900 dark:text-neutral-100">
                                 Project Core
                             </h3>
                             <ul className="space-y-4">
                                 {project.tech.map((tech) => (
-                                    <li key={tech} className="flex items-center text-sm text-neutral-600">
+                                    <li key={tech} className="flex items-center text-sm text-neutral-600 dark:text-neutral-300">
                                         <div className="w-1.5 h-1.5 bg-accent mr-3"></div>
                                         {tech}
                                     </li>
@@ -182,7 +182,7 @@ export default function ProjectDetailClient({
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="pt-10 border-t border-neutral-100"
+                            className="pt-10 border-t border-neutral-100 dark:border-neutral-800"
                         >
                             <p className="text-sm text-neutral-400 mb-6 italic">
                                 Thinking of building something similar?

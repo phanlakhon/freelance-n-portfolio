@@ -39,7 +39,7 @@ export default function TechStack() {
         <h2 className="heading-display text-display-md mb-6">
           {t("title")}
         </h2>
-        <p className="text-lg text-neutral-600">
+        <p className="text-lg text-neutral-600 dark:text-neutral-300">
           {t("description")}
         </p>
       </div>
@@ -53,14 +53,14 @@ export default function TechStack() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: idx * 0.1 }}
           >
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-neutral-500 mb-6">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-neutral-500 mb-6 dark:text-neutral-400">
               {category.category}
             </h3>
             <ul className="space-y-3">
               {category.items.map((item) => (
                 <li
                   key={item}
-                  className="text-neutral-700 font-medium hover:text-accent transition-colors cursor-default"
+                  className="text-neutral-700 font-medium hover:text-accent transition-colors cursor-default dark:text-neutral-300"
                 >
                   {item}
                 </li>
