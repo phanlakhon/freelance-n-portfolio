@@ -24,7 +24,7 @@ export default function LanguageSwitcher() {
     <button
       onClick={toggleLanguage}
       disabled={isPending}
-      className={`text-sm font-medium transition-colors p-2 border border-neutral-200 hover:border-accent ${
+      className={`border border-neutral-200 p-2 text-sm font-medium text-neutral-700 transition-colors hover:border-accent dark:border-neutral-700 dark:text-neutral-200 dark:hover:border-accent ${
         isPending ? "opacity-50 cursor-not-allowed" : "hover:text-accent"
       }`}
       aria-label="Switch Language"

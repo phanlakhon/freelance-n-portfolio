@@ -12,7 +12,7 @@ export default function WorkPageClient() {
     const t = useTranslations("Work");
 
     return (
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen bg-white dark:bg-neutral-950">
             <Navigation />
 
             <section className="section-container pt-32 pb-20">
@@ -28,7 +28,7 @@ export default function WorkPageClient() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-lg text-neutral-600 leading-relaxed"
+                        className="text-lg text-neutral-600 leading-relaxed dark:text-neutral-300"
                     >
                         {t("description")}
                     </motion.p>
@@ -45,7 +45,7 @@ export default function WorkPageClient() {
                             className="group"
                         >
                             <Link href={`/work/${project.slug}`}>
-                                <div className="relative aspect-[16/10] bg-neutral-50 border border-neutral-200 overflow-hidden mb-6 shadow-sm group-hover:shadow-md transition-all duration-500">
+                                <div className="relative aspect-[16/10] bg-neutral-50 border border-neutral-200 overflow-hidden mb-6 shadow-sm group-hover:shadow-md transition-all duration-500 dark:bg-neutral-900 dark:border-neutral-800">
                                     {project.image ? (
                                         <Image
                                             src={project.image}
@@ -78,7 +78,7 @@ export default function WorkPageClient() {
                                     {project.tech.map((tech) => (
                                         <span
                                             key={tech}
-                                            className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-tight bg-neutral-100 text-neutral-500 border border-neutral-200"
+                                            className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-tight bg-neutral-100 text-neutral-500 border border-neutral-200 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-800"
                                         >
                                             {tech}
                                         </span>

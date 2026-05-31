@@ -56,7 +56,7 @@ export default function Contact() {
     return (
         <section
             id="contact"
-            className="section-container section-spacing bg-neutral-50"
+            className="section-container py-section bg-neutral-50 dark:bg-neutral-900"
         >
             <div className="max-w-4xl mx-auto">
                 <motion.div
@@ -69,12 +69,12 @@ export default function Contact() {
                     <h2 className="heading-display text-display-md mb-6">
                         {t("title")}
                     </h2>
-                    <p className="text-lg text-neutral-600 max-w-xl mx-auto leading-relaxed">
+                    <p className="text-lg text-neutral-600 max-w-xl mx-auto leading-relaxed dark:text-neutral-300">
                         {t("description")}
                     </p>
                 </motion.div>
 
-                <div className="grid lg:grid-cols-2 gap-12">
+                <div className="grid lg:grid-cols-2 gap-12 rounded-none border border-transparent bg-transparent dark:border-neutral-800 dark:bg-neutral-950/55 dark:p-8 xl:dark:p-10">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -85,7 +85,7 @@ export default function Contact() {
                             <div>
                                 <label
                                     htmlFor="name"
-                                    className="block text-sm font-medium text-neutral-700 mb-2"
+                                    className="block text-sm font-medium text-neutral-700 mb-2 dark:text-neutral-200"
                                 >
                                     {t("form.name")}
                                 </label>
@@ -96,7 +96,7 @@ export default function Contact() {
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 bg-white border border-neutral-300 text-neutral-900 focus:border-accent focus:outline-none transition-colors"
+                                    className="w-full px-4 py-3 bg-white border border-neutral-300 text-neutral-900 focus:border-accent focus:outline-none transition-colors dark:bg-neutral-950 dark:border-neutral-700 dark:text-neutral-100"
                                     placeholder={t("form.name_placeholder")}
                                 />
                             </div>
@@ -104,7 +104,7 @@ export default function Contact() {
                             <div>
                                 <label
                                     htmlFor="email"
-                                    className="block text-sm font-medium text-neutral-700 mb-2"
+                                    className="block text-sm font-medium text-neutral-700 mb-2 dark:text-neutral-200"
                                 >
                                     {t("form.email")}
                                 </label>
@@ -115,7 +115,7 @@ export default function Contact() {
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 bg-white border border-neutral-300 text-neutral-900 focus:border-accent focus:outline-none transition-colors"
+                                    className="w-full px-4 py-3 bg-white border border-neutral-300 text-neutral-900 focus:border-accent focus:outline-none transition-colors dark:bg-neutral-950 dark:border-neutral-700 dark:text-neutral-100"
                                     placeholder={t("form.email_placeholder")}
                                 />
                             </div>
@@ -123,7 +123,7 @@ export default function Contact() {
                             <div>
                                 <label
                                     htmlFor="projectType"
-                                    className="block text-sm font-medium text-neutral-700 mb-2"
+                                    className="block text-sm font-medium text-neutral-700 mb-2 dark:text-neutral-200"
                                 >
                                     {t("form.type")}
                                 </label>
@@ -133,7 +133,7 @@ export default function Contact() {
                                     value={formData.projectType}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 bg-white border border-neutral-300 text-neutral-900 focus:border-accent focus:outline-none transition-colors"
+                                    className="w-full px-4 py-3 bg-white border border-neutral-300 text-neutral-900 focus:border-accent focus:outline-none transition-colors dark:bg-neutral-950 dark:border-neutral-700 dark:text-neutral-100"
                                 >
                                     <option value="">{t("form.type_select")}</option>
                                     <option value="ui-design">UI Design</option>
@@ -159,7 +159,7 @@ export default function Contact() {
                             <div>
                                 <label
                                     htmlFor="message"
-                                    className="block text-sm font-medium text-neutral-700 mb-2"
+                                    className="block text-sm font-medium text-neutral-700 mb-2 dark:text-neutral-200"
                                 >
                                     {t("form.message")}
                                 </label>
@@ -170,7 +170,7 @@ export default function Contact() {
                                     onChange={handleChange}
                                     required
                                     rows={5}
-                                    className="w-full px-4 py-3 bg-white border border-neutral-300 text-neutral-900 focus:border-accent focus:outline-none transition-colors resize-none"
+                                    className="w-full px-4 py-3 bg-white border border-neutral-300 text-neutral-900 focus:border-accent focus:outline-none transition-colors resize-none dark:bg-neutral-950 dark:border-neutral-700 dark:text-neutral-100"
                                     placeholder={t("form.message_placeholder")}
                                 />
                             </div>
@@ -208,7 +208,7 @@ export default function Contact() {
                             <div className="space-y-4">
                                 <a
                                     href="mailto:phanlakhon.ort@gmail.com"
-                                    className="flex items-center gap-3 text-neutral-700 hover:text-accent transition-colors group"
+                                    className="flex items-center gap-3 text-neutral-700 hover:text-accent transition-colors group dark:text-neutral-300"
                                 >
                                     <svg
                                         className="w-5 h-5 flex-shrink-0"
@@ -232,7 +232,7 @@ export default function Contact() {
                                     href="https://line.me/ti/p/byultae"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-3 text-neutral-700 hover:text-accent transition-colors group"
+                                    className="flex items-center gap-3 text-neutral-700 hover:text-accent transition-colors group dark:text-neutral-300"
                                 >
                                     <svg
                                         className="w-5 h-5 flex-shrink-0"
@@ -248,23 +248,23 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <div className="pt-8 border-t border-neutral-300">
+                        <div className="pt-8 border-t border-neutral-300 dark:border-neutral-700">
                             <h3 className="text-xl font-semibold mb-4">
                                 {t("contact_hours")}
                             </h3>
-                            <p className="text-neutral-600 mb-2">
+                            <p className="text-neutral-600 mb-2 dark:text-neutral-300">
                                 {t("hours_mon_fri")}
                             </p>
-                            <p className="text-neutral-600 mb-6">
+                            <p className="text-neutral-600 mb-6 dark:text-neutral-300">
                                 {t("hours_sat_sun")}
                             </p>
-                            <p className="text-sm text-neutral-500">
+                            <p className="text-sm text-neutral-500 dark:text-neutral-400">
                                 {t("reply_time")}
                             </p>
                         </div>
 
-                        <div className="pt-8 border-t border-neutral-300">
-                            <p className="text-neutral-700 leading-relaxed">
+                        <div className="pt-8 border-t border-neutral-300 dark:border-neutral-700">
+                            <p className="text-neutral-700 leading-relaxed dark:text-neutral-300">
                                 {t("closing_text")}
                             </p>
                         </div>

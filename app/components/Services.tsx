@@ -9,12 +9,12 @@ export default function Services() {
   const serviceKeys = ["item1", "item2", "item3"] as const;
 
   return (
-    <section id="services" className="section-container section-spacing bg-neutral-50">
+    <section id="services" className="section-container section-spacing bg-neutral-50 dark:bg-neutral-900">
       <div className="mb-20">
         <h2 className="heading-display text-display-md mb-6">
           {t("title")}
         </h2>
-        <p className="text-lg text-neutral-600 leading-relaxed">
+        <p className="text-lg text-neutral-600 leading-relaxed dark:text-neutral-300">
           {t("description")}
         </p>
       </div>
@@ -29,18 +29,18 @@ export default function Services() {
             transition={{ duration: 0.6, delay: index * 0.1 }}
             className="group"
           >
-            <div className="h-full p-8 bg-white border border-neutral-200 transition-all duration-300 hover:border-accent hover:shadow-lg">
+            <div className="h-full p-8 bg-white border border-neutral-200 transition-all duration-300 hover:border-accent hover:shadow-lg dark:bg-neutral-950 dark:border-neutral-800">
               <h3 className="text-2xl font-display font-semibold mb-4 group-hover:text-accent transition-colors">
                 {t(`items.${key}.title`)}
               </h3>
-              <p className="text-neutral-600 mb-6 leading-relaxed">
+              <p className="text-neutral-600 mb-6 leading-relaxed dark:text-neutral-300">
                 {t(`items.${key}.description`)}
               </p>
               <ul className="space-y-2">
                 {[1, 2, 3].map((num) => (
                   <li
                     key={num}
-                    className="flex items-start text-sm text-neutral-700"
+                    className="flex items-start text-sm text-neutral-700 dark:text-neutral-300"
                   >
                     <span className="inline-block w-1 h-1 rounded-full bg-accent mt-2 mr-3 flex-shrink-0"></span>
                     {t(`items.${key}.outcome${num}`)}

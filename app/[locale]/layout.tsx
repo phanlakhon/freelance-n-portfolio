@@ -111,7 +111,30 @@ export default async function RootLayout({
     const messages = await getMessages();
 
     return (
-        <html lang={locale} className={`${notoSansThai.variable}`}>
+        <html
+            lang={locale}
+            className={`${notoSansThai.variable}`}
+            suppressHydrationWarning
+        >
+            <head>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            (function() {
+                                try {
+                                    var theme = localStorage.getItem('theme');
+                                    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                                    if (theme === 'dark' || (!theme && prefersDark)) {
+                                        document.documentElement.classList.add('dark');
+                                    } else {
+                                        document.documentElement.classList.remove('dark');
+                                    }
+                                } catch (_) {}
+                            })();
+                        `,
+                    }}
+                />
+            </head>
             <body className="font-sans" suppressHydrationWarning>
                 <GoogleTagManager />
                 <StructuredData locale={locale} />

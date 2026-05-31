@@ -15,7 +15,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <p className="text-sm md:text-base font-medium tracking-[0.2em] uppercase text-neutral-500 mb-6">
+                    <p className="text-sm md:text-base font-medium tracking-[0.2em] uppercase text-neutral-500 mb-6 dark:text-neutral-400">
                         {t("badge")}
                     </p>
 
@@ -25,7 +25,7 @@ export default function Hero() {
                         {t("title_2")}
                     </h1>
 
-                    <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mb-12 leading-relaxed whitespace-pre-line">
+                    <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mb-12 leading-relaxed whitespace-pre-line dark:text-neutral-300">
                         {t("description")}
                     </p>
 
@@ -43,32 +43,32 @@ export default function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.5 }}
-                    className="mt-24 pt-12 border-t border-neutral-200"
+                    className="mt-24 pt-12 border-t border-neutral-200 dark:border-neutral-800"
                 >
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         <div>
-                            <p className="text-sm uppercase tracking-widest text-neutral-500 mb-4">
+                            <p className="text-sm uppercase tracking-widest text-neutral-500 mb-4 dark:text-neutral-400">
                                 {t("feature_1_title")}
                             </p>
-                            <p className="text-base text-neutral-700 leading-relaxed">
+                            <p className="text-base text-neutral-700 leading-relaxed dark:text-neutral-300">
                                 {t("feature_1_desc")}
                             </p>
                         </div>
 
                         <div>
-                            <p className="text-sm uppercase tracking-widest text-neutral-500 mb-4">
+                            <p className="text-sm uppercase tracking-widest text-neutral-500 mb-4 dark:text-neutral-400">
                                 {t("feature_2_title")}
                             </p>
-                            <p className="text-base text-neutral-700 leading-relaxed">
+                            <p className="text-base text-neutral-700 leading-relaxed dark:text-neutral-300">
                                 {t("feature_2_desc")}
                             </p>
                         </div>
 
                         <div>
-                            <p className="text-sm uppercase tracking-widest text-neutral-500 mb-4">
+                            <p className="text-sm uppercase tracking-widest text-neutral-500 mb-4 dark:text-neutral-400">
                                 {t("feature_3_title")}
                             </p>
-                            <p className="text-base text-neutral-700 leading-relaxed">
+                            <p className="text-base text-neutral-700 leading-relaxed dark:text-neutral-300">
                                 {t("feature_3_desc")}
                             </p>
                         </div>

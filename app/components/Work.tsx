@@ -16,7 +16,7 @@ export default function Work() {
                 <h2 className="heading-display text-display-md mb-6">
                     {t("title")}
                 </h2>
-                <p className="text-lg text-neutral-600 leading-relaxed max-w-3xl">
+                <p className="text-lg text-neutral-600 leading-relaxed max-w-3xl dark:text-neutral-300">
                     {t("description")}
                 </p>
             </div>
@@ -33,7 +33,7 @@ export default function Work() {
                     >
                         <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                             <Link href={`/work/${project.slug}`}>
-                                <div className="relative aspect-[5/4] bg-neutral-50 border border-neutral-200 overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-500 cursor-pointer">
+                                <div className="relative aspect-[5/4] bg-neutral-50 border border-neutral-200 overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-500 cursor-pointer dark:bg-neutral-900 dark:border-neutral-800">
                                     {project.image ? (
                                         <>
                                             <Image
@@ -84,7 +84,7 @@ export default function Work() {
                                     <h4 className="text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-2">
                                         {t("details_label")}
                                     </h4>
-                                    <p className="text-neutral-600 leading-relaxed text-[15px]">
+                                    <p className="text-neutral-600 leading-relaxed text-[15px] dark:text-neutral-300">
                                         {t(`projects.${project.id}.challenge`)}{" "}
                                         {t(`projects.${project.id}.solution`)}
                                     </p>
@@ -94,18 +94,18 @@ export default function Work() {
                                     <h4 className="text-sm font-semibold uppercase tracking-wide text-neutral-500 mb-2">
                                         {t("result_label")}
                                     </h4>
-                                    <p className="text-neutral-900 font-medium leading-relaxed text-[15px]">
+                                    <p className="text-neutral-900 font-medium leading-relaxed text-[15px] dark:text-neutral-100">
                                         {t(`projects.${project.id}.result`)}
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="flex flex-col items-start gap-6 pt-6 border-t border-neutral-200">
+                            <div className="flex flex-col items-start gap-6 pt-6 border-t border-neutral-200 dark:border-neutral-800">
                                 <div className="flex flex-wrap gap-2">
                                     {project.tech.map((tech) => (
                                         <span
                                             key={tech}
-                                            className="px-3 py-1 text-[10px] font-bold uppercase tracking-tight bg-neutral-100 text-neutral-600 border border-neutral-200"
+                                        className="px-3 py-1 text-[10px] font-bold uppercase tracking-tight bg-neutral-100 text-neutral-600 border border-neutral-200 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-800"
                                         >
                                             {tech}
                                         </span>
@@ -113,7 +113,7 @@ export default function Work() {
                                 </div>
                                 <Link
                                     href={`/work/${project.slug}`}
-                                    className="group inline-flex items-center text-sm font-bold uppercase tracking-wider text-neutral-900 hover:text-accent transition-colors duration-300"
+                                    className="group inline-flex items-center text-sm font-bold uppercase tracking-wider text-neutral-900 hover:text-accent transition-colors duration-300 dark:text-neutral-100"
                                 >
                                     {t("view_details")}
                                     <svg
