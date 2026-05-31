@@ -4,8 +4,8 @@
     "switch_lang": "ภาษาไทย"
   },
   "Metadata": {
-    "title": "รับทำเว็บไซต์ • รับทำเว็บ React, Next.js | Oorathai P. - Frontend Developer",
-    "description": "รับทำเว็บไซต์และพัฒนา Web Application ด้วย React และ Next.js ประสบการณ์กว่า 4 ปี จาก Frontend Developer ตัวจริง (Portfolio: ระบบจองตั๋วคอนเสิร์ต, E-commerce)"
+    "title": "รับทำเว็บ รับเขียนเว็บไซต์ React, Next.js | Oorathai P.",
+    "description": "รับทำเว็บ รับเขียนเว็บไซต์ และพัฒนา Web Application ด้วย React, Next.js และ TypeScript สำหรับธุรกิจที่ต้องการเว็บโหลดเร็ว รองรับ SEO และใช้งานจริงได้ระยะยาว"
   },
   "Navigation": {
     "services": "สิ่งที่ทำ",
@@ -15,10 +15,10 @@
     "contact": "ติดต่อ"
   },
   "Hero": {
-    "badge": "Frontend Developer · 4+ Years Experience",
-    "title_1": "รับทำเว็บไซต์และ",
-    "title_2": "Web Application",
-    "description": "สร้างเว็บไซต์ที่ตอบโจทย์การใช้งานจริง ด้วยประสบการณ์ 4+ ปีในสาย Frontend (React / Next.js) ที่พร้อมพัฒนาโปรเจกต์ของคุณให้เสถียรและรองรับการใช้งานระยะยาว",
+    "badge": "รับทำเว็บ · React / Next.js · 4+ Years Experience",
+    "title_1": "รับทำเว็บและ",
+    "title_2": "รับเขียน Web Application",
+    "description": "รับทำเว็บไซต์ รับเขียนเว็บ และพัฒนา Web Application ด้วย React / Next.js สำหรับธุรกิจที่ต้องการเว็บโหลดเร็ว เป็นมิตรกับ SEO และต่อยอดได้จริงในระยะยาว",
     "btn_discuss": "พูดคุยเรื่องโปรเจกต์",
     "btn_explore": "ดูผลงานที่ผ่านมา",
     "feature_1_title": "Scalable Code",
@@ -29,12 +29,12 @@
     "feature_3_desc": "แก้ปัญหาด้วยเครื่องมือที่เหมาะสมกับธุรกิจ และมีประสบการณ์ทำเว็บที่มีผู้ใช้งานจำนวนมาก"
   },
   "Services": {
-    "title": "บริการที่รับทำ",
-    "description": "รับทำหน้าเว็บใหม่ทั้งหมด และรับปรับปรุงระบบเดิมที่มีปัญหา ให้กลับมาทำงานได้อย่างเสถียร",
+    "title": "บริการรับทำเว็บและพัฒนา Frontend",
+    "description": "รับทำเว็บไซต์ใหม่ รับเขียนเว็บด้วย React / Next.js และรับปรับปรุงระบบเดิมที่มีปัญหา ให้กลับมาทำงานได้เร็ว เสถียร และรองรับ SEO",
     "items": {
       "item1": {
-        "title": "รับทำเว็บไซต์และ Web App",
-        "description": "สร้างเว็บใหม่จากศูนย์ด้วย Next.js และ React โดยให้ความสำคัญกับความเร็ว SEO และการออกแบบ Component ที่ใช้ซ้ำได้",
+        "title": "รับทำเว็บ React / Next.js",
+        "description": "รับทำเว็บไซต์และรับเขียนเว็บใหม่จากศูนย์ด้วย Next.js และ React โดยให้ความสำคัญกับความเร็ว SEO และการออกแบบ Component ที่ใช้ซ้ำได้",
         "outcome1": "เว็บโหลดเร็ว เป็นมิตรกับ SEO",
         "outcome2": "พร้อมสำหรับการต่อยอด",
         "outcome3": "แสดงผลได้ดีในทุกหน้าจอ"
