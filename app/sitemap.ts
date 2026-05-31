@@ -5,7 +5,7 @@ import { getGumroadProducts } from '@/lib/gumroad'
 import { getProductSlug } from '@/lib/product-seo'
  
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://phanlakhon-dev.vercel.app'
+  const baseUrl = 'https://phanlakhon-downlospace.space'
   const locales = routing.locales
   
   const staticPages = locales.map((locale: string) => ({

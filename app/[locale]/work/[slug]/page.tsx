@@ -1,11 +1,10 @@
 import { projects } from "@/lib/projects";
 import { notFound } from "next/navigation";
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import Navigation from "@/app/components/Navigation";
 import Footer from "@/app/components/Footer";
-import Image from "next/image";
 import ProjectDetailClient from "./ProjectDetailClient";
+import type { Metadata } from "next";
 
 export async function generateStaticParams() {
     const locales = ["en", "th"];
@@ -16,6 +15,49 @@ export async function generateStaticParams() {
             slug: project.slug,
         }))
     );
+}
+
+export async function generateMetadata(props: {
+    params: Promise<{ slug: string; locale: string }>;
+}): Promise<Metadata> {
+    const { slug, locale } = await props.params;
+    const project = projects.find((p) => p.slug === slug);
+
+    if (!project) {
+        return {};
+    }
+
+    const t = await getTranslations({ locale, namespace: "Work" });
+    const title = t(`projects.${project.id}.title`);
+    const description = `${t(`projects.${project.id}.challenge`)} ${t(
+        `projects.${project.id}.result`,
+    )}`;
+
+    return {
+        title,
+        description,
+        alternates: {
+            canonical: `/${locale}/work/${project.slug}`,
+            languages: {
+                en: `/en/work/${project.slug}`,
+                th: `/th/work/${project.slug}`,
+                "x-default": `/en/work/${project.slug}`,
+            },
+        },
+        openGraph: {
+            title,
+            description,
+            type: "article",
+            images: project.image
+                ? [
+                      {
+                          url: project.image,
+                          alt: title,
+                      },
+                  ]
+                : undefined,
+        },
+    };
 }
 
 export default async function ProjectPage(props: { params: Promise<{ slug: string; locale: string }> }) {

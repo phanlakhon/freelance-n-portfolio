@@ -1,13 +1,17 @@
 import InvestorPageClient from "./InvestorPageClient";
-import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }) {
     const { locale } = await props.params;
-    const t = await getTranslations({ locale, namespace: "Work" });
-    
+
     return {
-        title: `${t("projects.p5.title")} | Portfolio`,
-        description: t("projects.p5.challenge"),
+        title:
+            locale === "th"
+                ? "VC Investor Platform Case Study | งานพัฒนา Frontend"
+                : "VC Investor Platform Case Study | Frontend Development",
+        description:
+            locale === "th"
+                ? "ตัวอย่างงานพัฒนา investor relations platform และ interactive frontend experience สำหรับนำเสนอข้อมูลธุรกิจอย่างมืออาชีพ"
+                : "A frontend development case study for an investor relations platform with interactive storytelling, metrics, and a polished digital presentation.",
     };
 }
 

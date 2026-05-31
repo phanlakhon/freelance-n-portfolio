@@ -4,8 +4,8 @@
     "switch_lang": "English"
   },
   "Metadata": {
-    "title": "Freelance Web Developer • React & Next.js Expert | Oorathai P.",
-    "description": "Freelance Frontend Developer with 4+ years of experience specializing in React & Next.js. Building scalable websites and applications (Portfolio: Concert Ticketing, E-Commerce)."
+    "title": "Freelance Web Developer for React, Next.js Websites | Oorathai P.",
+    "description": "Freelance web developer building fast React and Next.js websites, SEO-friendly web applications, and Canva website templates for small businesses and creators."
   },
   "Navigation": {
     "services": "Services",
@@ -15,10 +15,10 @@
     "contact": "Contact"
   },
   "Hero": {
-    "badge": "Frontend Developer · 4+ Years Experience",
-    "title_1": "Building High-Performance",
-    "title_2": "Web Applications",
-    "description": "4+ years of frontend expertise in React & Next.js, delivering scalable digital solutions from concept to production that handle large numbers of users.",
+    "badge": "Freelance Web Developer · React / Next.js · 4+ Years",
+    "title_1": "Building Fast React",
+    "title_2": "and Next.js Websites",
+    "description": "Freelance web development for businesses that need fast, SEO-friendly websites, scalable web applications, and practical frontend systems built with React and Next.js.",
     "btn_discuss": "Discuss Your Strategy",
     "btn_explore": "View Case Studies",
     "feature_1_title": "Scalable Architecture",
@@ -29,12 +29,12 @@
     "feature_3_desc": "Tackling complex challenges with the right technological choices, specialized in high-demand web platform architectures."
   },
   "Services": {
-    "title": "Freelance Services",
-    "description": "I provide specialized frontend services from architecting new platforms to rescuing legacy systems.",
+    "title": "Web Development Services",
+    "description": "Freelance React and Next.js web development for new websites, frontend systems, API integrations, and performance-focused improvements.",
     "items": {
       "item1": {
-        "title": "Web App Development",
-        "description": "Building modern websites from scratch using Next.js and React. Focus on speed, SEO, and creating scalable component structures.",
+        "title": "React / Next.js Website Development",
+        "description": "Building modern websites from scratch using Next.js and React, with a focus on speed, SEO, responsive design, and scalable component structures.",
         "outcome1": "Fast & SEO-optimized",
         "outcome2": "Ready for new features",
         "outcome3": "Mobile Responsive"

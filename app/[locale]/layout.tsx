@@ -22,12 +22,13 @@ export async function generateMetadata({
     const t = await getTranslations({ locale, namespace: "Metadata" });
 
     return {
-        metadataBase: new URL("https://phanlakhon-dev.vercel.app"),
+        metadataBase: new URL("https://phanlakhon-downlospace.space"),
         alternates: {
             canonical: `/${locale}`,
             languages: {
                 en: "/en",
                 th: "/th",
+                "x-default": "/en",
             },
         },
         title: {
@@ -38,19 +39,26 @@ export async function generateMetadata({
         keywords: [
             "รับทำเว็บไซต์",
             "รับทำเว็บ",
+            "รับเขียนเว็บ",
+            "รับเขียนเว็บไซต์",
+            "รับทำเว็บ React",
+            "รับทำเว็บ Next.js",
             "Frontend Developer",
             "React Developer",
             "Next.js Developer",
             "Freelance Developer",
             "รับพัฒนา Web Application",
-            "Web Development"
+            "Web Development",
+            "Website Template",
+            "Canva Website Template",
+            "Small Shop Website Template",
         ],
         authors: [{ name: "Oorathai Phanlakhon" }],
         creator: "Oorathai Phanlakhon",
         openGraph: {
             type: "website",
             locale: locale === "th" ? "th_TH" : "en_US",
-            url: "https://phanlakhon-dev.vercel.app",
+            url: "https://phanlakhon-downlospace.space",
             siteName: "Oorathai Phanlakhon • Frontend Expert",
             title: t("title"),
             description: t("description"),

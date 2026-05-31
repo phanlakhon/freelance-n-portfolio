@@ -29,8 +29,18 @@ export async function generateMetadata({
             languages: {
                 en: "/en/products",
                 th: "/th/products",
+                "x-default": "/en/products",
             },
         },
+        keywords: [
+            "Canva website templates",
+            "website templates",
+            "small shop website template",
+            "small business website template",
+            "Canva templates",
+            "flower shop website template",
+            "digital templates",
+        ],
         openGraph: {
             title: t("metadata_title"),
             description: t("metadata_description"),
@@ -78,6 +88,18 @@ export default async function ProductsPage({
                   })),
               }
             : null;
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [1, 2, 3].map((item) => ({
+            "@type": "Question",
+            name: t(`faq.item${item}.question`),
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: t(`faq.item${item}.answer`),
+            },
+        })),
+    };
 
     return (
         <main>
@@ -88,6 +110,10 @@ export default async function ProductsPage({
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             )}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
 
             <section className="section-container pt-36 pb-20">
                 <div className="max-w-4xl">
@@ -183,7 +209,7 @@ export default async function ProductsPage({
                                             </div>
                                         )}
 
-                                        <div className="mt-auto flex items-center justify-between gap-4 border-t border-neutral-200 pt-5">
+                                        <div className="mt-auto flex flex-col gap-4 border-t border-neutral-200 pt-5 min-[420px]:flex-row min-[420px]:items-center min-[420px]:justify-between">
                                             <Link
                                                 href={productUrl}
                                                 className="group/link inline-flex min-w-0 items-center gap-2 text-sm font-semibold text-neutral-700 hover:text-accent transition-colors"
@@ -197,7 +223,7 @@ export default async function ProductsPage({
                                                 href={product.short_url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex flex-shrink-0 items-center justify-center gap-2 px-5 py-3 bg-primary text-white text-sm font-semibold hover:bg-primary-light transition-colors"
+                                                className="inline-flex w-full flex-shrink-0 items-center justify-center gap-2 px-5 py-3 bg-primary text-white text-sm font-semibold hover:bg-primary-light transition-colors min-[420px]:w-auto"
                                             >
                                                 {t("buy_button")}
                                                 <ExternalLink className="w-4 h-4" />

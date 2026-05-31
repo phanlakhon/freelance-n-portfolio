@@ -149,7 +149,7 @@ const MetricCard = ({ value, label, icon: Icon }: MetricProps) => {
             >
                 {value}
             </span>
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-neutral-500 group-hover:text-neutral-300 transition-colors">
+            <span className="text-xs font-bold uppercase tracking-[0.16em] text-neutral-500 group-hover:text-neutral-300 transition-colors sm:tracking-[0.3em]">
                 {label}
             </span>
         </div>
@@ -478,7 +478,7 @@ export default function InvestorPageClient() {
     return (
         <div
             ref={mainRef}
-            className="bg-[#050505] text-white min-h-screen selection:bg-accent selection:text-white font-sans"
+            className="overflow-x-hidden bg-[#050505] text-white min-h-screen selection:bg-accent selection:text-white font-sans"
         >
             {/* ─── Cursor Spotlight ─────────────────────────────────────────────
                 Fixed, pointer-events:none — never blocks clicks.
@@ -497,13 +497,13 @@ export default function InvestorPageClient() {
             />
 
             {/* ─── Navigation ──────────────────────────────────────────────────── */}
-            <nav className="custom-nav fixed top-0 left-0 w-full z-[100] px-10 py-8 transition-all duration-500">
-                <div className="max-w-[1400px] mx-auto flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-3 group">
+            <nav className="custom-nav fixed top-0 left-0 w-full z-[100] px-5 py-5 transition-all duration-500 sm:px-8 lg:px-10 lg:py-8">
+                <div className="max-w-[1400px] mx-auto flex min-w-0 items-center justify-between gap-4">
+                    <Link href="/" className="flex min-w-0 items-center gap-3 group">
                         <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm">
                             V
                         </div>
-                        <span className="text-sm font-bold uppercase tracking-[0.4em] group-hover:text-accent transition-colors">
+                        <span className="hidden min-w-0 truncate text-xs font-bold uppercase tracking-[0.22em] group-hover:text-accent transition-colors sm:block lg:text-sm lg:tracking-[0.4em]">
                             INVESTOR.RELATIONS
                         </span>
                     </Link>
@@ -522,15 +522,16 @@ export default function InvestorPageClient() {
                         )}
                     </div>
 
-                    <div className="flex items-center gap-6">
+                    <div className="flex flex-shrink-0 items-center gap-3 sm:gap-6">
                         <button className="p-2 text-neutral-400 hover:text-white transition-colors">
                             <Share2 size={18} strokeWidth={1.5} />
                         </button>
                         <Link
                             href="/work"
-                            className="px-6 py-3 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 backdrop-blur-md"
+                            className="px-4 py-3 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-[0.12em] hover:bg-white hover:text-black transition-all duration-500 backdrop-blur-md sm:px-6 sm:tracking-[0.2em]"
                         >
-                            Exit to Portfolio
+                            <span className="hidden sm:inline">Exit to </span>
+                            Portfolio
                         </Link>
                     </div>
                 </div>
@@ -551,9 +552,9 @@ export default function InvestorPageClient() {
                 </div>
 
                 <div className="section-container relative z-20 text-center hero-content">
-                    <div className="flex items-center justify-center gap-4 mb-10">
+                    <div className="flex items-center justify-center gap-3 mb-10">
                         <div className="h-px w-10 bg-accent" />
-                        <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-accent sm:tracking-[0.5em]">
                             Private Placement Memo
                         </span>
                         <div className="h-px w-10 bg-accent" />
@@ -590,7 +591,7 @@ export default function InvestorPageClient() {
                 <div className="section-container">
                     <div className="flex items-center gap-4 mb-20">
                         <div className="h-px w-10 bg-neutral-700" />
-                        <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-neutral-500">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-neutral-500 sm:tracking-[0.5em]">
                             Investment Thesis
                         </span>
                     </div>
@@ -664,14 +665,14 @@ export default function InvestorPageClient() {
                 aria-label="Institutional Partners"
                 className="py-10 bg-[#050505] border-b border-neutral-900 overflow-hidden"
             >
-                <p className="text-center text-[9px] font-bold uppercase tracking-[0.5em] text-neutral-700 mb-8">
+                <p className="px-6 text-center text-[9px] font-bold uppercase tracking-[0.18em] text-neutral-700 mb-8 sm:tracking-[0.5em]">
                     Trusted by leading institutions
                 </p>
                 <div className="marquee-track flex items-center gap-24 w-max">
                     {[...LP_NAMES, ...LP_NAMES].map((name, i) => (
                         <span
                             key={i}
-                            className="flex-shrink-0 text-[10px] font-bold uppercase tracking-[0.4em] text-neutral-600 hover:text-neutral-300 transition-colors cursor-default whitespace-nowrap"
+                            className="flex-shrink-0 text-[10px] font-bold uppercase tracking-[0.18em] text-neutral-600 hover:text-neutral-300 transition-colors cursor-default whitespace-nowrap sm:tracking-[0.4em]"
                         >
                             {name}
                         </span>
@@ -713,7 +714,7 @@ export default function InvestorPageClient() {
                                     className="text-neutral-500 group-hover:text-white"
                                 />
                             </div>
-                            <span className="block text-xs font-bold text-accent mb-6 tracking-[0.4em] uppercase">
+                            <span className="block text-xs font-bold text-accent mb-6 tracking-[0.18em] uppercase sm:tracking-[0.4em]">
                                 {item.date}
                             </span>
                             <h3 className="text-4xl font-display font-bold mb-8 text-white group-hover:text-accent transition-colors">
@@ -752,7 +753,7 @@ export default function InvestorPageClient() {
                 <div className="flex flex-col md:flex-row h-full">
                     {/* Left — static label + heading during the pin */}
                     <div className="flex-shrink-0 w-full md:w-[42%] flex flex-col justify-center px-6 md:px-20 py-20 md:py-0 md:border-r border-neutral-900">
-                        <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent mb-8 block">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-accent mb-8 block sm:tracking-[0.5em]">
                             Investment Rationale
                         </span>
                         <h2 className="text-6xl md:text-7xl font-display font-bold leading-[0.9] tracking-tighter mb-10">
@@ -849,10 +850,10 @@ export default function InvestorPageClient() {
 
                         <div className="flex flex-col items-center">
                             <div className="w-16 h-px bg-accent mb-8" />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white">
+                            <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white sm:tracking-[0.4em]">
                                 Chief Technical Architect
                             </span>
-                            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-neutral-500 mt-2">
+                            <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-neutral-500 mt-2 sm:tracking-[0.4em]">
                                 V-Capital Relations Platform
                             </span>
                         </div>

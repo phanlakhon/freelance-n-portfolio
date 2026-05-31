@@ -50,6 +50,7 @@ export async function generateMetadata({
             languages: {
                 en: `/en/products/${slug}`,
                 th: `/th/products/${slug}`,
+                "x-default": `/en/products/${slug}`,
             },
         },
         openGraph: {
@@ -94,7 +95,7 @@ export default async function ProductDetailPage({
         name: product.name,
         description: content.metaDescription,
         image: imageUrl,
-        url: `https://phanlakhon-dev.vercel.app/${locale}/products/${slug}`,
+        url: `https://phanlakhon-downlospace.space/${locale}/products/${slug}`,
         brand: {
             "@type": "Brand",
             name: "O. Phanlakhon",
@@ -115,13 +116,13 @@ export default async function ProductDetailPage({
                 "@type": "ListItem",
                 position: 1,
                 name: "Products",
-                item: `https://phanlakhon-dev.vercel.app/${locale}/products`,
+                item: `https://phanlakhon-downlospace.space/${locale}/products`,
             },
             {
                 "@type": "ListItem",
                 position: 2,
                 name: product.name,
-                item: `https://phanlakhon-dev.vercel.app/${locale}/products/${slug}`,
+                item: `https://phanlakhon-downlospace.space/${locale}/products/${slug}`,
             },
         ],
     };
@@ -184,7 +185,7 @@ export default async function ProductDetailPage({
                     </div>
 
                     <div className="min-w-0">
-                        <p className="text-sm md:text-base font-medium tracking-[0.2em] uppercase text-accent mb-5">
+                        <p className="break-words text-xs md:text-base font-medium tracking-[0.12em] md:tracking-[0.2em] uppercase text-accent mb-5">
                             {content.eyebrow}
                         </p>
                         <h1 className="heading-display text-display-md mb-6 break-words">
@@ -220,7 +221,7 @@ export default async function ProductDetailPage({
                 </div>
             </section>
 
-            <section className="section-container section-spacing bg-neutral-50">
+            <section className="section-container py-16 md:py-section bg-neutral-50">
                 <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-14">
                     <div>
                         <p className="text-sm font-medium tracking-widest uppercase text-accent mb-4">

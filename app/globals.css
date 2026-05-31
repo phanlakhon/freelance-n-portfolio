@@ -12,10 +12,12 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
   body {
     @apply bg-white text-neutral-900;
+    overflow-x: clip;
   }
 
   ::selection {
