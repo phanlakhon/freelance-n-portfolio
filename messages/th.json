@@ -10,6 +10,7 @@
   "Navigation": {
     "services": "สิ่งที่ทำ",
     "work": "ผลงาน",
+    "products": "สินค้า",
     "about": "เกี่ยวกับฉัน",
     "contact": "ติดต่อ"
   },
@@ -92,6 +93,56 @@
   "TechStack": {
     "title": "ทักษะและเครื่องมือ",
     "description": "เครื่องมือและเทคโนโลยีหลักที่ใช้ในการพัฒนาโปรเจกต์"
+  },
+  "Products": {
+    "metadata_title": "Canva Website Templates สำหรับร้านค้าเล็กและธุรกิจสร้างสรรค์",
+    "metadata_description": "รวม Canva website template, small shop website template และ digital resource สำหรับร้านดอกไม้ ร้านค้าเล็ก freelancer และธุรกิจสร้างสรรค์",
+    "badge": "Canva Templates · Website Templates · Small Shop Resources",
+    "title": "Canva Website Templates สำหรับร้านค้าเล็กและธุรกิจสร้างสรรค์",
+    "description": "รวม Canva website template และ digital resource ที่แก้ไขต่อได้ เหมาะสำหรับ small shop, ร้านดอกไม้, maker, freelancer และธุรกิจบริการที่อยากมีหน้าเว็บหรือหน้าโปรโมตที่ดูเป็นมืออาชีพโดยไม่ต้องเริ่มจากศูนย์",
+    "collection_label": "Website templates และ digital resources",
+    "collection_title": "Canva templates สำหรับเว็บไซต์ธุรกิจขนาดเล็ก",
+    "product_count": "มีสินค้า {count} รายการ",
+    "buy_button": "ซื้อเลย",
+    "details_button": "ดูรายละเอียด",
+    "empty": {
+      "missing_token": {
+        "title": "กำลังเตรียมสินค้า",
+        "description": "หน้านี้กำลังเตรียม template และ digital resource ใหม่ ๆ กลับมาดูอีกครั้งเร็ว ๆ นี้นะคะ"
+      },
+      "error": {
+        "title": "ยังโหลดรายการสินค้าไม่ได้",
+        "description": "ตอนนี้ยังแสดงรายการสินค้าไม่ได้ชั่วคราว กรุณากลับมาดูอีกครั้งในภายหลัง"
+      },
+      "ready": {
+        "title": "ยังไม่มีสินค้าที่เผยแพร่",
+        "description": "จะมี template และ digital resource ใหม่ ๆ เพิ่มเข้ามาในหน้านี้เร็ว ๆ นี้"
+      }
+    },
+    "faq_label": "FAQ",
+    "faq_title": "ก่อนตัดสินใจซื้อ",
+    "faq": {
+      "item1": {
+        "question": "ซื้อแล้วจะได้รับสินค้าอย่างไร?",
+        "answer": "หลังชำระเงิน คุณจะได้รับใบเสร็จและลิงก์สำหรับเข้าถึงไฟล์หรือหน้าสินค้า และสามารถกลับไปเปิดสินค้าที่ซื้อไว้ได้ภายหลังผ่านบัญชีลูกค้า"
+      },
+      "item2": {
+        "question": "ใช้กับงานลูกค้าหรือธุรกิจได้ไหม?",
+        "answer": "สินค้าส่วนใหญ่ทำมาเพื่อช่วยงานส่วนตัว งาน freelance หรือ workflow ของธุรกิจขนาดเล็ก แนะนำให้อ่านรายละเอียดในหน้าสินค้านั้น ๆ เผื่อมีเงื่อนไขเฉพาะของแต่ละสินค้า"
+      },
+      "item3": {
+        "question": "ถ้ามีคำถามก่อนหรือหลังซื้อ ติดต่อได้ไหม?",
+        "answer": "ติดต่อผ่านช่องทางบนเว็บไซต์นี้ได้ค่ะ หากไม่แน่ใจว่าสินค้าเหมาะกับงานของคุณไหม สามารถทักมาถามก่อนตัดสินใจซื้อได้"
+      }
+    }
+  },
+  "ProductDetail": {
+    "back": "กลับไปหน้าสินค้า",
+    "price": "ราคา",
+    "buy": "ซื้อเลย",
+    "why_label": "Product Guide",
+    "why_title": "ช่วยให้ตัดสินใจได้ง่ายขึ้นว่า website template นี้เหมาะกับธุรกิจของคุณไหม",
+    "fallback_description": "ดูรายละเอียดไฟล์ เงื่อนไข และข้อมูลล่าสุดของสินค้าบนหน้าชำระเงิน"
   },
   "Contact": {
     "title": "ติดต่อพูดคุยเรื่องโปรเจกต์",
