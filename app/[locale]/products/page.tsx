@@ -126,6 +126,17 @@ export default async function ProductsPage({
                     <p className="text-lg md:text-xl text-neutral-600 leading-relaxed max-w-3xl dark:text-neutral-300">
                         {t("description")}
                     </p>
+                    <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                        <a
+                            href="https://www.etsy.com/shop/DownloSpace"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex min-h-14 items-center justify-center gap-2 whitespace-nowrap bg-[#f1641e] px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-[#d95718] sm:w-auto"
+                        >
+                            {t("etsy_button")}
+                            <ExternalLink className="h-4 w-4" />
+                        </a>
+                    </div>
                 </div>
 
             </section>
