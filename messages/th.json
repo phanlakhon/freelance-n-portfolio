@@ -94,6 +94,15 @@
     "title": "ทักษะและเครื่องมือ",
     "description": "เครื่องมือและเทคโนโลยีหลักที่ใช้ในการพัฒนาโปรเจกต์"
   },
+  "ProductPromo": {
+    "badge": "Website Templates",
+    "title": "เริ่มต้นหน้าเว็บที่ดูเป็นมืออาชีพได้เร็วขึ้น",
+    "description": "เลือกดู Canva website templates ที่แก้ไขต่อได้ เหมาะสำหรับร้านค้าเล็ก ธุรกิจบริการ และ creator ที่อยากมีพื้นที่ดี ๆ สำหรับส่งลูกค้าเข้าไปดู",
+    "cta": "ดู Templates",
+    "etsy_cta": "ดูร้านบน Etsy",
+    "image_label": "ดู Canva website templates",
+    "image_alt": "แบนเนอร์โปรโมต Canva website templates สำหรับเว็บไซต์ธุรกิจขนาดเล็ก"
+  },
   "Products": {
     "metadata_title": "Canva Website Templates สำหรับร้านค้าเล็กและธุรกิจสร้างสรรค์",
     "metadata_description": "รวม Canva website template, small shop website template และ digital resource สำหรับร้านดอกไม้ ร้านค้าเล็ก freelancer และธุรกิจสร้างสรรค์",
@@ -103,6 +112,7 @@
     "collection_label": "Website templates และ digital resources",
     "collection_title": "Canva templates สำหรับเว็บไซต์ธุรกิจขนาดเล็ก",
     "product_count": "มีสินค้า {count} รายการ",
+    "etsy_button": "ซื้อบน Etsy",
     "buy_button": "ซื้อเลย",
     "details_button": "ดูรายละเอียด",
     "empty": {

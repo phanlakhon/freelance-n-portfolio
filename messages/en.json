@@ -94,6 +94,15 @@
     "title": "Technical Arsenal",
     "description": "Curated technologies I utilize to build resilient digital products."
   },
+  "ProductPromo": {
+    "badge": "Website Templates",
+    "title": "Launch a polished website-style presence faster",
+    "description": "Browse editable Canva website templates for small shops, service businesses, and creators who want a stronger place to send customers.",
+    "cta": "Browse Templates",
+    "etsy_cta": "View Etsy Shop",
+    "image_label": "Browse Canva website templates",
+    "image_alt": "Promotional banner showing Canva website template previews for small business websites"
+  },
   "Products": {
     "metadata_title": "Canva Website Templates for Small Shops & Creative Businesses",
     "metadata_description": "Browse Canva website templates, small shop website templates, and practical digital resources for florists, makers, freelancers, and creative small businesses.",
@@ -103,6 +112,7 @@
     "collection_label": "Website templates and digital resources",
     "collection_title": "Canva templates for small business websites",
     "product_count": "{count, plural, =0 {No products available yet} one {# product available} other {# products available}}",
+    "etsy_button": "Shop on Etsy",
     "buy_button": "Buy Now",
     "details_button": "View Details",
     "empty": {
